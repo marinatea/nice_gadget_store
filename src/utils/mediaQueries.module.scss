@@ -1,0 +1,17 @@
+@mixin phone {
+  @media screen {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (width >= 640px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (width >= 1200px) {
+    @content;
+  }
+}

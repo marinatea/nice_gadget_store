@@ -1,0 +1,148 @@
+@use "/src/utils/miscFonts.scss" as fonts;
+@use "/src/constants/colors.module.scss" as color;
+@use "/src/utils/mediaQueries.module.scss" as mQ;
+
+.container {
+  border: 1px solid color.$elements;
+  padding: 32px;
+  width: 287px;
+  color: color.$primary;
+
+  @include mQ.tablet {
+    width: 229px;
+  }
+}
+
+.slider-card-container {
+  border: 1px solid color.$elements;
+  padding: 32px;
+  width: 212px;
+  color: color.$primary;
+
+  @include mQ.tablet {
+    width: 237px;
+  }
+
+  @include mQ.desktop {
+    width: 272px;
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 32px;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.image {
+  width: 223px;
+  height: 130px;
+  object-fit: contain;
+
+  @include mQ.tablet {
+    width: 165px;
+    height: 196px;
+  }
+
+  @include mQ.desktop {
+    width: 208px;
+    height: 196px;
+  }
+}
+
+.slider-card-image {
+  width: 148px;
+  height: 129px;
+  object-fit: contain;
+
+  @include mQ.tablet {
+    width: 173px;
+    height: 202px;
+  }
+
+  @include mQ.desktop {
+    width: 208px;
+    height: 196px;
+  }
+}
+
+.name {
+  @include fonts.body-font;
+
+  display: flex;
+  transition: color 0.3s ease;
+  margin-bottom: 8px;
+  height: 40px;
+  color: color.$primary;
+  font-size: 14px;
+  line-height: 20px;
+
+  &:hover {
+    color: color.$secondary;
+  }
+}
+
+.price {
+  @include fonts.uppercase-font;
+
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.current-price {
+  margin-right: 8px;
+  line-height: 50px;
+}
+
+.full-price {
+  color: #89939a;
+  line-height: 50px;
+  text-decoration: line-through;
+}
+
+.details-list {
+  margin-bottom: 16px;
+  border-top: 1px solid color.$elements;
+  padding-top: 16px;
+  padding-inline-start: 0;
+}
+
+.details-item {
+  @include fonts.button-font;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.details-title {
+  color: color.$secondary;
+  line-height: 15px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-to-card {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.add-to-favorite {
+  border: 1px solid color.$elements;
+  padding: 11px;
+
+  &:hover {
+    border-color: color.$secondary;
+  }
+}

@@ -1,0 +1,17 @@
+@use '/src/utils/desktopHeaderFonts' as dHF;
+
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  @include dHF.h1-font;
+}
+
+.photo {
+  height: 80vh;
+}
