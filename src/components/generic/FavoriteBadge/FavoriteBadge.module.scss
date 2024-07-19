@@ -2,7 +2,7 @@
 @use "/src/utils/miscFonts.scss" as fonts;
 @use "/src/constants/colors.module.scss" as color;
 
-.favoriteBadge {
+.favorite-badge {
   display: none;
 
   @include mQ.tablet {
@@ -21,4 +21,10 @@
     color: color.$white;
     font-size: 9px;
   }
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

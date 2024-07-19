@@ -19,35 +19,31 @@ const ImagesSelector: React.FC<Props> = ({ images }) => {
 
   return (
     <>
-      <div className={styles.selectedImgContainer}>
+      <div className={styles['selected-img-container']}>
         <img
           src={images[selectedImageIndex]}
-          className={styles.selectedImg}
+          className={styles['selected-img']}
           alt="main image"
         />
       </div>
 
-      <div className={styles.secondaryImgsContainer}>
-        {images.map((image, i) => {
-          return (
-            <div
-              key={image}
-              className={classNames(
-                styles.secondaryImgContainer,
-                selectedImageIndex === i ? styles.selected : '',
-              )}
-              onClick={() => {
-                setSelectedImageIndex(i);
-              }}
-            >
-              <img
-                src={image}
-                className={styles.secondaryImg}
-                alt="secondary image"
-              />
-            </div>
-          );
-        })}
+      <div className={styles['secondary-imgs-container']}>
+        {images.map((image, i) => (
+          <div
+            key={image}
+            className={classNames(
+              styles['secondary-img-container'],
+              selectedImageIndex === i ? styles.selected : ''
+            )}
+            onClick={() => setSelectedImageIndex(i)}
+          >
+            <img
+              src={image}
+              className={styles['secondary-img']}
+              alt="secondary image"
+            />
+          </div>
+        ))}
       </div>
     </>
   );

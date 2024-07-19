@@ -9,6 +9,7 @@
   margin-top: 24px;
   color: color.$secondary;
   list-style: none;
+  cursor: pointer;
 
   @include mF.body-font;
 
@@ -24,14 +25,14 @@
   }
 
   .home,
-  .arrowRight,
-  .arrowLeft {
+  .arrow-right,
+  .arrow-left {
     display: flex;
     align-items: center;
     cursor: pointer;
   }
 
-  .backText {
+  .back-text {
     cursor: pointer;
   }
 

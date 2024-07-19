@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
-
-import Button from '../../../../generic/Button/Button';
-import { Icons } from '../../../../../types';
-import classNames from 'classnames';
-import styles from './Banner.module.scss';
-import { useSwipeable } from 'react-swipeable';
+import React, { useEffect, useState } from "react";
+import Button from "../../../../generic/Button/Button";
+import { Icons } from "../../../../../types";
+import classNames from "classnames";
+import styles from "./Banner.module.scss";
+import { useSwipeable } from "react-swipeable";
 
 const Banner: React.FC = () => {
   const [sliderCounter, setSliderCounter] = useState(1);
@@ -31,14 +30,14 @@ const Banner: React.FC = () => {
 
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSliderCounter(counter => (counter + 1 > 4 ? 1 : counter + 1)); // Assuming 4 images
+      setSliderCounter((counter) => (counter + 1 > 4 ? 1 : counter + 1)); // Assuming 4 images
     }, 5000);
 
     return () => {
@@ -51,11 +50,11 @@ const Banner: React.FC = () => {
   }, [sliderCounter, imageWidth]);
 
   const handleSliderCounterNext = () => {
-    setSliderCounter(counter => (counter + 1 > 4 ? 1 : counter + 1)); // Assuming 4 images
+    setSliderCounter((counter) => (counter + 1 > 4 ? 1 : counter + 1));
   };
 
   const handleSliderCounterPrev = () => {
-    setSliderCounter(counter => (counter - 1 < 1 ? 4 : counter - 1)); // Assuming 4 images
+    setSliderCounter((counter) => (counter - 1 < 1 ? 4 : counter - 1));
   };
 
   const rightClickDisabled = sliderCounter === 4;
@@ -63,57 +62,57 @@ const Banner: React.FC = () => {
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () =>
-      setSliderCounter(counter => (counter + 1 > 4 ? 1 : counter + 1)),
+      setSliderCounter((counter) => (counter + 1 > 4 ? 1 : counter + 1)),
     onSwipedRight: () =>
-      setSliderCounter(counter => (counter - 1 < 1 ? 4 : counter - 1)),
+      setSliderCounter((counter) => (counter - 1 < 1 ? 4 : counter - 1)),
   });
 
   return (
     <section className={styles.banner} {...swipeHandlers}>
-      <div className={styles.banner__content}>
+      <div className={styles["banner__content"]}>
         <Button
-          className={classNames(styles.banner__button, {
-            [styles.disabled]: leftClickDisabled,
+          className={classNames(styles["banner__button"], {
+            [styles["banner__button--disabled"]]: leftClickDisabled,
           })}
           onClick={handleSliderCounterPrev}
           type="secondary"
           icon={Icons.ARROW_LEFT}
           isDisabled={leftClickDisabled}
         />
-        <div className={styles.banner__imagesWrapper}>
+        <div className={styles["banner__images-wrapper"]}>
           <div
-            className={styles.banner__images}
+            className={styles["banner__images"]}
             style={{ transform: `translateX(-${translate}px)` }}
           >
             {[...Array(4)].map((_, index) => (
               <div
                 key={index}
-                className={classNames(styles.banner__imageContainer, {
-                  [styles.banner__imageContainer1]: index === 0,
-                  [styles.banner__imageContainer2]: index === 1,
-                  [styles.banner__imageContainer3]: index === 2,
-                  [styles.banner__imageContainer4]: index === 3,
+                className={classNames(styles["banner__image-container"], {
+                  [styles["banner__image-container1"]]: index === 0,
+                  [styles["banner__image-container2"]]: index === 1,
+                  [styles["banner__image-container3"]]: index === 2,
+                  [styles["banner__image-container4"]]: index === 3,
                 })}
               >
                 {index === 0 && (
-                  <div className={styles.banner__imageContainer1}>
-                    <div className={styles.banner__image1}></div>
-                    <div className={styles.banner__overlayContainer}>
-                      <div className={styles.banner__textContainer}>
-                        <h2 className={styles.banner__overlayTitle}>
+                  <div className={styles["banner__image-container1"]}>
+                    <div className={styles["banner__image1"]}></div>
+                    <div className={styles["banner__overlay-container"]}>
+                      <div className={styles["banner__text-container"]}>
+                        <h2 className={styles["banner__overlay-title"]}>
                           Now is available
-                          <br /> in our store!{' '}
-                          <span className={styles.banner__smile}>
+                          <br /> in our store!{" "}
+                          <span className={styles["banner__smile"]}>
                             &#128076;
                           </span>
                         </h2>
-                        <p className={styles.banner__overlayText}>
+                        <p className={styles["banner__overlay-text"]}>
                           Be the first
                         </p>
                       </div>
                       <Button
-                        className={styles.banner__overlayButton}
-                        onClick={() => alert('Button clicked!')}
+                        className={styles["banner__overlay-button"]}
+                        onClick={() => alert("Button clicked!")}
                         type="primary"
                         title="ORDER NOW"
                       />
@@ -125,8 +124,8 @@ const Banner: React.FC = () => {
           </div>
         </div>
         <Button
-          className={classNames(styles.banner__button, {
-            [styles.disabled]: rightClickDisabled,
+          className={classNames(styles["banner__button"], {
+            [styles["banner__button--disabled"]]: rightClickDisabled,
           })}
           onClick={handleSliderCounterNext}
           type="secondary"
@@ -134,12 +133,12 @@ const Banner: React.FC = () => {
           isDisabled={rightClickDisabled}
         />
       </div>
-      <ul className={styles.banner__list}>
+      <ul className={styles["banner__list"]}>
         {[...Array(4)].map((_, index) => (
           <li
             key={index}
-            className={classNames(styles.banner__item, {
-              [styles['banner__item--active']]: sliderCounter === index + 1,
+            className={classNames(styles["banner__item"], {
+              [styles["banner__item--active"]]: sliderCounter === index + 1,
             })}
           />
         ))}

@@ -9,15 +9,15 @@ const About: React.FC<Props> = ({ product }) => {
   return (
     <>
       {product && (
-        <div className={styles.about}>
-          <h2 title="About" className={styles.title}>
+        <div className={styles['about']}>
+          <h2 title="About" className={styles['title']}>
             About
           </h2>
-          <ul>
+          <ul className={styles['tech-list']}>
             {product.description.map(({ title, text }) => (
-              <li key={title} className={styles.aboutItem}>
-                <h3 className={styles.aboutItemTitle}>{title}</h3>
-                <p className={styles.aboutItemText}>{text}</p>
+              <li key={title} className={styles['about-item']}>
+                <h3 className={styles['about-item-title']}>{title}</h3>
+                <p className={styles['about-item-text']}>{text}</p>
               </li>
             ))}
           </ul>

@@ -3,7 +3,7 @@
 @use "/src/utils/desktopHeaderFonts.scss" as dHF;
 @use "/src/constants/colors.module.scss" as color;
 
-.productsSlider {
+.products-slider {
   width: 100%;
   overflow: hidden;
 
@@ -13,7 +13,7 @@
     align-items: center;
     margin-bottom: 24px;
 
-    &Buttons {
+    &-buttons {
       display: flex;
       flex-direction: row;
       gap: 16px;
@@ -39,20 +39,20 @@
     }
   }
 
-  &__topButton {
+  &__top-button {
     display: flex;
     align-items: center;
     background-color: transparent;
     width: 32px;
     height: 32px;
 
-    &.smallButtonDisabled {
+    &.small-button-disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
   }
 
-  &__topTitle {
+  &__top-title {
     margin: 0;
     color: color.$primary;
 

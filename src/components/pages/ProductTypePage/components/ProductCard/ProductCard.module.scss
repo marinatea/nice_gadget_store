@@ -7,6 +7,7 @@
   padding: 32px;
   width: 287px;
   color: color.$primary;
+  cursor: pointer;
 
   @include mQ.tablet {
     width: 229px;

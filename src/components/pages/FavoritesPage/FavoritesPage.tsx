@@ -17,11 +17,11 @@ const FavoritesPage: React.FC = () => {
   }
 
   return (
-    <main className={styles.favoritesPage}>
+    <main className={styles['favorites-page']}>
       <Breadcrumbs />
-      <h1 className={styles.title}>Favorites</h1>
-      <span className={styles.subText}>{favorites.length} items</span>
-      <div className={styles.cardsContainer}>
+      <h1 className={styles['title']}>Favorites</h1>
+      <span className={styles['sub-text']}>{favorites.length} items</span>
+      <div className={styles['cards-container']}>
         {favorites.map((product: ProductT, index: number) => (
           <ProductCard
             key={product.name ? `${product.name}-${index}` : `product_${index}`}

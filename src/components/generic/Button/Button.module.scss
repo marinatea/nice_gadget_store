@@ -8,15 +8,16 @@
   justify-content: center;
   align-items: center;
   transition: border-color 0.3s ease;
-  border: color.$primary;
+  border: 1px solid color.$primary;
   background-color: color.$primary;
+  cursor: pointer;
 }
 
-.isDisabled {
+.is-disabled {
   cursor: auto;
 }
 
-.isSpaceBetween {
+.is-space-between {
   justify-content: space-between;
 }
 
@@ -42,7 +43,6 @@
 }
 
 .secondary {
-  // padding: 7px;paddingpaddingpadding
   border: 1px solid color.$icons;
   background-color: color.$white;
   font-size: 14px;
@@ -52,7 +52,7 @@
     border-color: color.$primary;
   }
 
-  &.isDisabled {
+  &.is-disabled {
     border-color: color.$elements;
   }
 }

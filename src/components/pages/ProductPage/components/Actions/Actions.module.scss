@@ -48,7 +48,7 @@
   }
 }
 
-.colorsLink {
+.colors-link {
   display: block;
   transition: box-shadow 0.3s ease;
   box-shadow: 0 0 0 1px color.$elements;
@@ -61,17 +61,17 @@
     box-shadow: 0 0 0 1px color.$primary;
   }
 
-  &.activeLink {
+  &.active-link {
     cursor: default;
     box-shadow: 0 0 0 1px color.$primary;
   }
 }
 
-.capacityButton {
+.capacity-button {
   padding: 4px 8px;
   line-height: 22px;
 
-  &.capacityButtonActive {
+  &.capacity-button-active {
     cursor: default;
 
     &:hover {
@@ -90,7 +90,7 @@
   line-height: 41px;
 }
 
-.priceRegular {
+.price-regular {
   @include fonts.body-font;
 
   margin-left: 8px;
@@ -107,17 +107,17 @@
   margin-bottom: 32px;
 }
 
-.addToCard {
+.add-to-card {
   flex-grow: 1;
   margin-right: 8px;
   padding: 12px 4px;
 }
 
-.addToFavorite {
+.add-to-favorite {
   padding: 15px;
 }
 
-.infoItem {
+.info-item {
   @include fonts.body-font;
 
   display: flex;
@@ -131,6 +131,6 @@
   }
 }
 
-.infoTitle {
+.info-title {
   color: color.$secondary;
 }

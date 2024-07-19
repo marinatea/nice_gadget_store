@@ -26,7 +26,7 @@
   }
 }
 
-.registerContainer {
+.register-container {
   grid-column: span 4;
   margin: 0 auto;
   box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
@@ -45,7 +45,7 @@
   }
 }
 
-.registerTitle {
+.register-title {
   margin-bottom: 20px;
   color: color.$primary;
   text-align: center;
@@ -53,8 +53,8 @@
   @include dHF.h2-font;
 }
 
-.registerForm {
-  .formGroup {
+.register-form {
+  .form-group {
     margin-bottom: 15px;
     padding-right: 20px;
 
@@ -76,7 +76,7 @@
     }
   }
 
-  .registerRedirectButton {
+  .register-redirect-button {
     display: block;
     cursor: pointer;
     border: none;
@@ -91,7 +91,7 @@
   }
 }
 
-.loginButton {
+.login-button {
   cursor: pointer;
   margin-top: 10px;
   border: none;

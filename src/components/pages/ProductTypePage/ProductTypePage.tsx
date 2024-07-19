@@ -126,8 +126,8 @@ const ProductTypePage: React.FC<Props> = ({ productsType }) => {
           onClick={() => pagination(i)}
           className={
             currentPage === i
-              ? `${styles.active} ${styles.pageNumber}`
-              : styles.pageNumber
+              ? `${styles.active} ${styles['page-number']}`
+              : styles['page-number']
           }
           onMouseEnter={e => e.currentTarget.classList.add(styles.hover)}
           onMouseLeave={e => e.currentTarget.classList.remove(styles.hover)}
@@ -145,11 +145,11 @@ const ProductTypePage: React.FC<Props> = ({ productsType }) => {
   }
 
   return (
-    <main className={styles.phonesPage}>
+    <main className={styles['phones-page']}>
       <Breadcrumbs />
       <h1 className={styles.title}>{pageTitle}</h1>
-      <span className={styles.subText}>{sortedProducts.length} models</span>
-      <div className={styles.filterWrapper}>
+      <span className={styles['sub-text']}>{sortedProducts.length} models</span>
+      <div className={styles['filter-wrapper']}>
         <div className={styles.filter}>
           <label className={styles.label} htmlFor="sort">
             Sort by:
@@ -173,22 +173,22 @@ const ProductTypePage: React.FC<Props> = ({ productsType }) => {
           />
         </div>
       </div>
-      <div className={styles.cardsContainer}>
+      <div className={styles['cards-container']}>
         {sortedProducts.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      <div className={styles.pageSelector}>
+      <div className={styles['page-selector']}>
         <Icon
           iconId={Icons.ARROW_LEFT}
-          className={`${styles.arrowLeft} ${currentPage === 1 ? styles.disabled : ''}`}
+          className={`${styles['arrow-left']} ${currentPage === 1 ? styles.disabled : ''}`}
           onClick={() => pagination(currentPage - 1)}
           disabled={currentPage === 1}
         />
         {renderPageNumbers()}
         <Icon
           iconId={Icons.ARROW_RIGHT}
-          className={`${styles.arrowRight} ${currentPage === totalPages ? styles.disabled : ''}`}
+          className={`${styles['arrow-right']} ${currentPage === totalPages ? styles.disabled : ''}`}
           onClick={() => pagination(currentPage + 1)}
           disabled={currentPage === totalPages}
         />

@@ -11,7 +11,7 @@ const CartBadge: React.FC = () => {
   );
 
   return (
-    <div className={styles.cartBadge}>
+    <div className={`${styles['cart-badge']}`}>
       <span className={styles.quantity}>{itemCount}</span>
     </div>
   );

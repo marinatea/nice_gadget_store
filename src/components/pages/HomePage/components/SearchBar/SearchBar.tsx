@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-
 import Icon from '../../../../generic/Icon/Icon';
 import { Icons } from '../../../../../types';
 import { Link } from 'react-router-dom';
@@ -46,10 +45,10 @@ const SearchBar: React.FC = () => {
         setIsListOpen(true);
       }}
     >
-      <label className={styles.iconContainer} htmlFor="searchInput">
-        <Icon iconId={Icons.SEARCH} className={styles.icon} />
+      <label className={styles['icon-container']} htmlFor="searchInput">
+        <Icon iconId={Icons.SEARCH} className={styles['icon']} />
       </label>
-      <div className={styles.inputContainer}>
+      <div className={styles['input-container']}>
         <input
           className={styles.input}
           type="text"
@@ -61,7 +60,7 @@ const SearchBar: React.FC = () => {
           }}
         />
         {isListOpen && (
-          <div className={styles.itemsContainer}>
+          <div className={styles['items-container']}>
             {displayProducts.map(product => (
               <Link
                 to={`/${product.category}/${product.itemId}`}
@@ -73,7 +72,7 @@ const SearchBar: React.FC = () => {
                   }, 1);
                 }}
               >
-                <div className={styles.imgContainer}>
+                <div className={styles['img-container']}>
                   <img
                     className={styles.img}
                     src={product.image}

@@ -1,17 +1,17 @@
-interface Props {
-  onClick?: VoidFunction;
-  icon?: Icons;
-  title?: string | number;
-  type?: 'primary' | 'secondary' | 'rounded' | 'transparent';
-  isDisabled?: boolean;
-  isSelected?: boolean;
-  className?: string;
-}
-
 import Icon from '../Icon/Icon';
 import { Icons } from '../../../types';
 import classnames from 'classnames';
 import styles from './Button.module.scss';
+
+interface Props {
+  onClick?: VoidFunction;
+  icon?: Icons;
+  title?: string | number;
+  type?: 'primary' | 'secondary' | 'transparent';
+  isDisabled?: boolean;
+  isSelected?: boolean;
+  className?: string;
+}
 
 const Button: React.FC<Props> = ({
   type = 'primary',
@@ -28,12 +28,10 @@ const Button: React.FC<Props> = ({
       disabled={isDisabled}
       onClick={onClick}
       className={classnames(styles.container, className, {
-        [styles.isDisabled]: isDisabled,
-        [styles.isSpaceBetween]: !!title && !!icon,
-        [styles.primary]: type === 'primary',
-        [styles.secondary]: type === 'secondary',
-        [styles.transparent]: type === 'transparent',
-        [styles.selected]: isSelected,
+        [styles['is-disabled']]: isDisabled,
+        [styles['is-space-between']]: !!title && !!icon,
+        [styles[type]]: type,
+        [styles['selected']]: isSelected,
       })}
     >
       {title}

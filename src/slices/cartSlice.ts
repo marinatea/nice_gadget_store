@@ -1,7 +1,5 @@
 /* eslint-disable no-param-reassign */
-
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
 import { ICartProduct } from '../types';
 
 export interface CartState {

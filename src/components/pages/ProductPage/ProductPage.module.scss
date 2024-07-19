@@ -1,10 +1,9 @@
 @use "/src/utils/mediaQueries.module.scss" as mQ;
 @use "/src/utils/mobileHeaderFonts.scss" as mHF;
-@use "/src/utils/miscFonts.scss" as mF;
 @use "/src/utils/desktopHeaderFonts.scss" as dHF;
 @use "/src/constants/colors.module" as color;
 
-.productPage {
+.product-page {
   display: grid;
   justify-content: center;
 

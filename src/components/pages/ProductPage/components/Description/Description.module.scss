@@ -15,11 +15,11 @@
   width: 100%;
 }
 
-.aboutItem {
+.about-item {
   margin-top: 32px;
 }
 
-.aboutItemTitle {
+.about-item-title {
   @include fonts.button-font;
 
   margin-bottom: 16px;
@@ -27,7 +27,7 @@
   line-height: 26px;
 }
 
-.aboutItemText {
+.about-item-text {
   @include fonts.button-font;
 
   color: color.$secondary;
@@ -37,11 +37,11 @@
   grid-column: 14 / 25;
 }
 
-.techList {
+.tech-list {
   margin-top: 32px;
 }
 
-.techItem {
+.tech-item {
   @include fonts.button-font;
 
   display: flex;
@@ -53,6 +53,6 @@
   }
 }
 
-.techTitle {
+.tech-title {
   color: color.$secondary;
 }

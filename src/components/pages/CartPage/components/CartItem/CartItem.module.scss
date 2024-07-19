@@ -3,7 +3,7 @@
 @use "/src/utils/desktopHeaderFonts.scss" as dHF;
 @use "/src/constants/colors.module" as color;
 
-.cartItemContainer {
+.cart-item-container {
   display: grid;
   justify-content: center;
 
@@ -11,25 +11,25 @@
     gap: 16px;
     grid-template-columns: 1fr;
 
-    .cartItem {
+    .cart-item {
       border: 1px solid color.$elements;
       padding: 12px;
 
-      .firstRow {
+      .first-row {
         display: flex;
         flex-direction: row;
         align-items: center;
         height: 80px;
         padding: 8px;
 
-        .closeIcon {
+        .close-icon {
           color: color.$elements;
           align-items: center;
           margin: 24px 16px 32px 0;
           border: 0;
         }
 
-        .phoneContainer {
+        .phone-container {
           height: 80px;
           width: 80px;
 
@@ -51,7 +51,7 @@
         }
       }
 
-      .secondRow {
+      .second-row {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -62,7 +62,7 @@
           grid-template-columns: 1fr 1fr 1fr;
           width: 96px;
 
-          .minusButton {
+          .minus-button {
             padding: 6px;
             align-self: center;
           }
@@ -76,7 +76,7 @@
             color: color.$primary;
           }
 
-          .plusButton {
+          .plus-button {
             padding: 6px;
             align-self: center;
           }
@@ -93,7 +93,7 @@
   }
 
   @include mQ.tablet {
-    .cartItem {
+    .cart-item {
       display: flex;
       flex-direction: row;
       justify-content: space-between;

@@ -25,43 +25,43 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <main className={styles.homePage}>
+    <main className={styles['home-page']}>
       <SearchBar />
-      <h1 className={styles.title}>
+      <h1 className={styles['title']}>
         Hey{user?.firstName && ' '}
         {user?.firstName}, welcome to Nice Gadgets store!
       </h1>
-      <div className={styles.slider}>
+      <div className={styles['slider']}>
         <Banner />
       </div>
-      <div className={styles.newModels}>
+      <div className={styles['new-models']}>
         <ProductsSlider title="Brand new models" products={newModels} />
       </div>
-      <div className={styles.categories}>
-        <h2 className={styles.categoriesTitle}>Shop by category</h2>
+      <div className={styles['categories']}>
+        <h2 className={styles['categories-title']}>Shop by category</h2>
         {categories[0].count !== 0 &&
           categories.map(({ title, type, count }) => (
-            <div className={styles.categoryContainer} key={type}>
+            <div className={styles['category-container']} key={type}>
               <Link
                 to={type}
                 onClick={() => {
                   window.scroll(0, 0);
                 }}
               >
-                <div className={styles.categoryImgContainer}>
+                <div className={styles['category-img-container']}>
                   <img
-                    className={styles.categoryImg}
+                    className={styles['category-img']}
                     src={`https://storage.googleapis.com/group_project_images/img/category-${type}.png`}
                     alt="category"
                   />
                 </div>
-                <h4 className={styles.categoryTitle}>{title}</h4>
-                <p className={styles.categoryCount}>{count} models</p>
+                <h4 className={styles['category-title']}>{title}</h4>
+                <p className={styles['category-count']}>{count} models</p>
               </Link>
             </div>
           ))}
       </div>
-      <div className={styles.hotPrices}>
+      <div className={styles['hot-prices']}>
         <ProductsSlider products={hotPrices} title="Hot prices" />
       </div>
     </main>

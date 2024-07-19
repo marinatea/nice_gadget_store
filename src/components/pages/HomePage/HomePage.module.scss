@@ -4,7 +4,7 @@
 @use "/src/utils/desktopHeaderFonts.scss" as dHF;
 @use "/src/constants/colors.module" as color;
 
-.homePage {
+.home-page {
   display: grid;
   justify-content: center;
 
@@ -40,7 +40,7 @@
     margin-top: 24px;
   }
 
-  .newModels {
+  .new-models {
     grid-column: span 4;
     margin-top: 56px;
   }
@@ -49,20 +49,20 @@
     grid-column: span 4;
     margin-top: 56px;
 
-    .categoriesTitle {
+    .categories-title {
       @include mHF.h2-font;
 
       color: color.$primary;
     }
 
-    .categoryContainer {
+    .category-container {
       margin-top: 24px;
 
       a {
         text-decoration: none;
       }
 
-      .categoryImgContainer {
+      .category-img-container {
         transition: scale 0.2s ease;
         aspect-ratio: 1/1;
         width: 100%;
@@ -72,47 +72,47 @@
           scale: 1.04;
         }
 
-        .categoryImg {
+        .category-img {
           padding: 6% 12%;
           width: 105%;
         }
       }
 
-      .categoryTitle {
+      .category-title {
         @include dHF.h4-font;
 
         margin-top: 32px;
         color: color.$primary;
       }
 
-      .categoryCount {
+      .category-count {
         @include mF.body-font;
 
         color: color.$secondary;
       }
     }
 
-    .categoryContainer:nth-of-type(1) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(1) {
+      .category-img-container {
         background-color: color.$type1;
       }
     }
 
-    .categoryContainer:nth-of-type(2) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(2) {
+      .category-img-container {
         background-color: color.$type2;
       }
     }
 
-    .categoryContainer:nth-of-type(3) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(3) {
+      .category-img-container {
         background-color: color.$type3;
       }
     }
 
-    .categoryContainer:last-of-type {
-      .categoryImgContainer {
-        .categoryImg {
+    .category-container:last-of-type {
+      .category-img-container {
+        .category-img {
           padding: 20% 10%;
           width: 175%;
         }
@@ -120,7 +120,7 @@
     }
   }
 
-  .hotPrices {
+  .hot-prices {
     grid-column: span 4;
     margin-top: 56px;
   }
@@ -139,7 +139,7 @@
     margin-top: 32px;
   }
 
-  .newModels {
+  .new-models {
     grid-column: span 12;
     margin-top: 64px;
   }
@@ -151,63 +151,63 @@
     gap: 16px;
     margin-top: 64px;
 
-    .categoriesTitle {
+    .categories-title {
       @include mHF.h2-font;
 
       flex-basis: 100%;
       color: color.$primary;
     }
 
-    .categoryContainer {
+    .category-container {
       flex: 1;
       margin-top: 24px;
 
-      .categoryImgContainer {
+      .category-img-container {
         aspect-ratio: 1/1;
         width: 100%;
         overflow: hidden;
 
-        .categoryImg {
+        .category-img {
           padding: 6% 12%;
           width: 105%;
         }
       }
 
-      .categoryTitle {
+      .category-title {
         @include dHF.h4-font;
 
         margin-top: 32px;
         color: color.$primary;
       }
 
-      .categoryCount {
+      .category-count {
         @include mF.body-font;
 
         color: color.$secondary;
       }
     }
 
-    .categoryContainer:nth-of-type(1) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(1) {
+      .category-img-container {
         background-color: #feffbe;
       }
     }
 
-    .categoryContainer:nth-of-type(2) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(2) {
+      .category-img-container {
         background-color: #838383;
       }
     }
 
-    .categoryContainer:nth-of-type(3) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(3) {
+      .category-img-container {
         background-color: #a03662;
       }
     }
 
-    .categoryContainer:last-of-type {
-      .categoryImgContainer {
-        .categoryImg {
+    .category-container:last-of-type {
+      .category-img-container {
+        .category-img {
           padding: 20% 10%;
           width: 175%;
         }
@@ -215,7 +215,7 @@
     }
   }
 
-  .hotPrices {
+  .hot-prices {
     grid-column: span 12;
     margin-top: 64px;
   }
@@ -232,7 +232,7 @@
     margin-top: 80px;
   }
 
-  .newModels {
+  .new-models {
     grid-column: span 24;
     margin-top: 80px;
   }
@@ -244,29 +244,29 @@
     gap: 16px;
     margin-top: 80px;
 
-    .categoriesTitle {
+    .categories-title {
       @include mHF.h2-font;
 
       flex-basis: 100%;
       color: color.$primary;
     }
 
-    .categoryContainer {
+    .category-container {
       flex: 1;
       margin-top: 24px;
 
-      .categoryImgContainer {
+      .category-img-container {
         aspect-ratio: 1/1;
         width: 100%;
         overflow: hidden;
 
-        .categoryImg {
+        .category-img {
           padding: 6% 12%;
           width: 105%;
         }
       }
 
-      .categoryTitle {
+      .category-title {
         margin-top: 32px;
 
         @include dHF.h4-font;
@@ -274,34 +274,34 @@
         color: color.$primary;
       }
 
-      .categoryCount {
+      .category-count {
         @include mF.body-font;
 
         color: color.$secondary;
       }
     }
 
-    .categoryContainer:nth-of-type(1) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(1) {
+      .category-img-container {
         background-color: color.$type1;
       }
     }
 
-    .categoryContainer:nth-of-type(2) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(2) {
+      .category-img-container {
         background-color: color.$type2;
       }
     }
 
-    .categoryContainer:nth-of-type(3) {
-      .categoryImgContainer {
+    .category-container:nth-of-type(3) {
+      .category-img-container {
         background-color: color.$type3;
       }
     }
 
-    .categoryContainer:last-of-type {
-      .categoryImgContainer {
-        .categoryImg {
+    .category-container:last-of-type {
+      .category-img-container {
+        .category-img {
           padding: 20% 10%;
           width: 175%;
         }
@@ -309,7 +309,7 @@
     }
   }
 
-  .hotPrices {
+  .hot-prices {
     grid-column: span 24;
     margin-top: 80px;
   }

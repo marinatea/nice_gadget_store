@@ -2,7 +2,7 @@
 @use "/src/utils/miscFonts.scss" as fonts;
 @use "/src/constants/colors.module.scss" as color;
 
-.cartBadge {
+.cart-badge {
   display: none;
 
   @include mQ.tablet {

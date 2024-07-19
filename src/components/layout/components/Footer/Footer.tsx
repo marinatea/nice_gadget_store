@@ -1,3 +1,4 @@
+import React from 'react';
 import Icon from '../../../generic/Icon/Icon';
 import { Icons } from '../../../../types';
 import { Link } from 'react-router-dom';
@@ -5,17 +6,16 @@ import styles from './Footer.module.scss';
 
 const Footer: React.FC = () => {
   return (
-    <div className={styles.footerWrapper}>
+    <div className={styles['footer-wrapper']}>
       <footer className={styles.footer}>
-        <Link to="/" className={styles.footer__logo}>
+        <Link to="/" className={styles['footer__logo']}>
           <img
-            //eslint-disable-next-line max-len
             src="https://storage.googleapis.com/group_project_images/img/Logo.png"
             alt="logo"
           />
         </Link>
 
-        <nav className={`${styles['footer-nav']} ${styles.footer__nav}`}>
+        <nav className={`${styles['footer-nav']} ${styles['footer__nav']}`}>
           <a
             href="https://github.com/MaPaJBY"
             className={styles['footer-nav__item']}

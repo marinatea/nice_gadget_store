@@ -11,30 +11,30 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className={styles.main}>
-      <div className={styles.loginContainer}>
+    <div className={styles['main']}>
+      <div className={styles['login-container']}>
         <Breadcrumbs />
-        <h2 className={styles.loginTitle}>Login</h2>
-        <form className={styles.loginForm}>
-          <div className={styles.formGroup}>
+        <h2 className={styles['login-title']}>Login</h2>
+        <form className={styles['login-form']}>
+          <div className={styles['form-group']}>
             <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" required />
           </div>
-          <div className={styles.formGroup}>
+          <div className={styles['form-group']}>
             <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" required />
           </div>
           <Button
             type="primary"
             title="Login"
-            className={styles.loginButton}
+            className={styles['login-button']}
             onClick={() => {}}
           />
         </form>
         <Button
           type="primary"
           title="Register"
-          className={styles.registerRedirectButton}
+          className={styles['register-redirect-button']}
           onClick={handleRegisterClick}
         />
       </div>

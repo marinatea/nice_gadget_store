@@ -49,25 +49,23 @@ const Header: React.FC = () => {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={styles['header']}>
       <NavLink to="/">
         <img
-          className={styles.divLogo}
-          src={
-            'https://storage.googleapis.com/group_project_images/img/Logo.png'
-          }
+          className={styles['header-logo']}
+          src="https://storage.googleapis.com/group_project_images/img/Logo.png"
           alt="logo"
         />
       </NavLink>
       <nav
-        className={`${styles.navbar} ${isNavbarOpen ? styles.navbar_active : ''}`}
+        className={`${styles['header-navbar']} ${isNavbarOpen ? styles['header-navbar--active'] : ''}`}
       >
-        <ul className={styles.navlinks}>
+        <ul className={styles['header-navlinks']}>
           <li>
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => (isActive ? styles['active'] : '')}
             >
               Home
             </NavLink>
@@ -76,7 +74,7 @@ const Header: React.FC = () => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/phones"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => (isActive ? styles['active'] : '')}
             >
               Phones
             </NavLink>
@@ -85,7 +83,7 @@ const Header: React.FC = () => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/tablets"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => (isActive ? styles['active'] : '')}
             >
               Tablets
             </NavLink>
@@ -94,7 +92,7 @@ const Header: React.FC = () => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/accessories"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => (isActive ? styles['active'] : '')}
             >
               Accessories
             </NavLink>
@@ -103,17 +101,17 @@ const Header: React.FC = () => {
             <li>
               <NavLink
                 to="/signin"
-                className={({ isActive }) => (isActive ? styles.active : '')}
+                className={({ isActive }) => (isActive ? styles['active'] : '')}
               >
-                SignIn
+                Sign In
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/signup"
-                className={({ isActive }) => (isActive ? styles.active : '')}
+                className={({ isActive }) => (isActive ? styles['active'] : '')}
               >
-                SigneUp
+                Sign Up
               </NavLink>
             </li>
           </SignedOut>
@@ -127,40 +125,40 @@ const Header: React.FC = () => {
 
           {isNavbarOpen && (
             <>
-              <div className={styles.burgerIcons}>
+              <div className={styles['header-burger-icons']}>
                 <NavLink
                   to="/favorites"
-                  className={styles.burgerIcon}
+                  className={styles['header-burger-icon']}
                   onClick={() => setIsNavbarOpen(false)}
                 >
-                  <Icon iconId={Icons.HEART} className={styles.heart} />
+                  <Icon iconId={Icons.HEART} className={styles['header-icon-heart']} />
                 </NavLink>
                 <NavLink
                   to="/cart"
-                  className={styles.burgerIcon}
+                  className={styles['header-burger-icon']}
                   onClick={() => setIsNavbarOpen(!isNavbarOpen)}
                 >
-                  <Icon iconId={Icons.CART} className={styles.cart} />
+                  <Icon iconId={Icons.CART} className={styles['header-icon-cart']} />
                 </NavLink>
               </div>
             </>
           )}
         </ul>
       </nav>
-      <div className={styles.icons}>
+      <div className={styles['header-icons']}>
         <NavLink to="/favorites">
-          <Icon iconId={Icons.HEART} className={styles.heart} />
+          <Icon iconId={Icons.HEART} className={styles['header-icon-heart']} />
           <FavoriteBadge />
         </NavLink>
         <NavLink to="/cart">
-          <Icon iconId={Icons.CART} className={styles.cart} />
+          <Icon iconId={Icons.CART} className={styles['header-icon-cart']} />
           <CartBadge />
         </NavLink>
         <div
-          className={styles.union}
+          className={styles['header-burger']}
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
         >
-          <Icon iconId={icon} className={styles.burger} />
+          <Icon iconId={icon} className={styles['header-burger']} />
         </div>
       </div>
     </header>

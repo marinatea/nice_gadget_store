@@ -1,11 +1,11 @@
 import styles from './NotFoundPage.module.scss';
 
-const NotFoundPage = () => {
+const NotFoundPage: React.FC = () => {
   return (
-    <div className={styles.all}>
-      <h1 className={styles.title}>Page not found</h1>
+    <div className={styles['all']}>
+      <h1 className={styles['title']}>Page not found</h1>
       <img
-        className={styles.photo}
+        className={styles['photo']}
         src={
           // eslint-disable-next-line max-len
           'https://storage.googleapis.com/group_project_images/img/product-not-found.png'

@@ -2,20 +2,20 @@
 @use "/src/constants/colors.module" as color;
 
 @include mQ.phone {
-  .selectedImgContainer {
+  .selected-img-container {
     aspect-ratio: 1/1;
     width: 100%;
     height: auto;
     overflow: hidden;
   }
 
-  .selectedImg {
+  .selected-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-  .secondaryImgsContainer {
+  .secondary-imgs-container {
     display: flex;
     justify-content: space-evenly;
     gap: 8px;
@@ -23,7 +23,7 @@
     height: 55px;
   }
 
-  .secondaryImgContainer {
+  .secondary-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@
     overflow: hidden;
   }
 
-  .secondaryImg {
+  .secondary-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -45,12 +45,12 @@
 }
 
 @include mQ.tablet {
-  .selectedImgContainer {
+  .selected-img-container {
     align-self: flex-start;
     margin-top: 0;
   }
 
-  .secondaryImgsContainer {
+  .secondary-imgs-container {
     flex-direction: column;
     order: -1;
     margin-top: 0;
@@ -58,7 +58,7 @@
     height: 300px;
   }
 
-  .secondaryImgContainer {
+  .secondary-img-container {
     align-items: start;
   }
 }

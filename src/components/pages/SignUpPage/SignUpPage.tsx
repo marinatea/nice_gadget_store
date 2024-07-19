@@ -3,7 +3,7 @@ import styles from './SignUpPage.module.scss';
 
 const SignUpPage: React.FC = () => {
   return (
-    <div className={styles.signUpPage}>
+    <div className={styles['sign-up-page']}>
       <SignUp signInUrl="/signin" />
     </div>
   );

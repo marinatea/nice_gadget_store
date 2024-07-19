@@ -1,5 +1,4 @@
 import { useAppDispatch, useCartSelector } from '../../../hooks/reduxHooks';
-
 import Breadcrumbs from '../../generic/Breadcrumbs/Breadcrumbs';
 import Button from '../../generic/Button/Button';
 import CartItem from './components/CartItem/CartItem';
@@ -47,32 +46,31 @@ const CartPage: React.FC = () => {
   };
 
   return (
-    <main className={styles.cartPage}>
+    <main className={styles['cart-page']}>
       {isCheckedOut && <ModalSuccess />}
       <Breadcrumbs />
-      <h1 className={styles.title}>Cart</h1>
-      <div className={styles.cardsContainer}>
+      <h1 className={styles['title']}>Cart</h1>
+      <div className={styles['cards-container']}>
         {!totalPrice && (
           <img
-            className={styles.cartIsEmpty}
-            // eslint-disable-next-line max-len
+            className={styles['cart-is-empty']}
             src="https://storage.googleapis.com/group_project_images/img/cart-is-empty.png"
             alt="cart is empty"
           />
         )}
-        <div className={styles.cardContainer}>
+        <div className={styles['card-container']}>
           <CartItem />
         </div>
       </div>
-      <div className={styles.checkoutContainer}>
-        <div className={styles.infoContainer}>
-          <div className={styles.cashInfo}>${totalPrice}</div>
-          <div className={styles.itemInfo}>Total for {itemCount} items</div>
+      <div className={styles['checkout-container']}>
+        <div className={styles['info-container']}>
+          <div className={styles['cash-info']}>${totalPrice}</div>
+          <div className={styles['item-info']}>Total for {itemCount} items</div>
         </div>
         <Button
           title={'Checkout'}
           type="primary"
-          className={styles.checkoutButton}
+          className={styles['checkout-button']}
           onClick={handleCheckout}
           isDisabled={itemCount === 0}
         />

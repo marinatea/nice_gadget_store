@@ -1,18 +1,17 @@
-interface Props {
-  options: Option[];
-  value: SortType | number | undefined;
-  onChange: (value: SortType | number | undefined) => void;
-  className: string;
-}
-
 import { useEffect, useRef, useState } from 'react';
-
 import { SortType } from '../../../../../types';
 import styles from './Select.module.scss';
 
 interface Option {
   value: SortType | number | undefined;
   label: string;
+}
+
+interface Props {
+  options: Option[];
+  value: SortType | number | undefined;
+  onChange: (value: SortType | number | undefined) => void;
+  className: string;
 }
 
 const CustomSelect: React.FC<Props> = ({
@@ -53,14 +52,14 @@ const CustomSelect: React.FC<Props> = ({
   }, []);
 
   return (
-    <div className={`${styles.customSelect} ${className}`} ref={dropdownRef}>
-      <div className={styles.selectedOption} onClick={toggleDropdown}>
+    <div className={`${styles['custom-select']} ${className}`} ref={dropdownRef}>
+      <div className={styles['selected-option']} onClick={toggleDropdown}>
         {value === undefined || !options.find(option => option.value === value)
           ? 'Select...'
           : options.find(option => option.value === value)?.label}
       </div>
       {isOpen && (
-        <div className={styles.optionsContainer}>
+        <div className={styles['options-container']}>
           {options.map(option => (
             <div
               key={option.value}

@@ -24,11 +24,11 @@ const CartItem: React.FC = () => {
     allProducts.find((p: ProductT) => p.name === prod.name);
 
   return (
-    <div className={styles.cartItemContainer}>
+    <div className={styles['cart-item-container']}>
       {Object.values(cart).map(product => {
         return (
-          <div className={styles.cartItem} key={product.id}>
-            <div className={styles.firstRow}>
+          <div className={styles['cart-item']} key={product.id}>
+            <div className={styles['first-row']}>
               <Button
                 onClick={() => {
                   dispatch(
@@ -38,27 +38,27 @@ const CartItem: React.FC = () => {
                     }),
                   );
                 }}
-                className={styles.closeIcon}
+                className={styles['close-icon']}
                 title=""
                 type="secondary"
                 icon={Icons.CLOSE}
               />
-              <div className={styles.phoneContainer}>
+              <div className={styles['phone-container']}>
                 <img
-                  className={styles.image}
+                  className={styles['image']}
                   src={product.image}
                   alt={product.name}
                 />
               </div>
               <Link
                 to={`/${productForLink(product)?.category}/${productForLink(product)?.itemId}`}
-                className={styles.name}
+                className={styles['name']}
               >
                 {product.name}
               </Link>
             </div>
-            <div className={styles.secondRow}>
-              <div className={styles.counter}>
+            <div className={styles['second-row']}>
+              <div className={styles['counter']}>
                 <Button
                   onClick={() => {
                     dispatch(
@@ -70,10 +70,10 @@ const CartItem: React.FC = () => {
                     );
                   }}
                   type="secondary"
-                  className={styles.minusButton}
+                  className={styles['minus-button']}
                   icon={Icons.MINUS}
                 />
-                <div className={styles.count}>{product.count}</div>
+                <div className={styles['count']}>{product.count}</div>
                 <Button
                   onClick={() => {
                     dispatch(
@@ -85,11 +85,11 @@ const CartItem: React.FC = () => {
                     );
                   }}
                   type="secondary"
-                  className={styles.plusButton}
+                  className={styles['plus-button']}
                   icon={Icons.PLUS}
                 />
               </div>
-              <div className={styles.price}>
+              <div className={styles['price']}>
                 ${product.price * product.count}
               </div>
             </div>

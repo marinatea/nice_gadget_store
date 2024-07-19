@@ -1,27 +1,19 @@
-interface Props {
-  product: ProductT;
-  isSlider?: boolean;
-}
-
-import { Icons, ProductT } from '../../../../../types';
-import {
-  addToFavorites,
-  removeFromFavorites,
-} from '../../../../../slices/favoriteSlice';
-import {
-  useAppDispatch,
-  useCartSelector,
-  useFavoritesSelector,
-} from '../../../../../hooks/reduxHooks';
 import { useEffect, useState } from 'react';
-
+import { Icons, ProductT } from '../../../../../types';
+import { addToFavorites, removeFromFavorites } from '../../../../../slices/favoriteSlice';
+import { useAppDispatch, useCartSelector, useFavoritesSelector } from '../../../../../hooks/reduxHooks';
 import Button from '../../../../generic/Button/Button';
 import Icon from '../../../../generic/Icon/Icon';
-import { addToCart } from '../../../../../slices/cartSlice';
 import classnames from 'classnames';
 import styles from './ProductCard.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '@clerk/clerk-react';
+import { addToCart } from '../../../../../slices/cartSlice';
+
+interface Props {
+  product: ProductT;
+  isSlider?: boolean;
+}
 
 const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
   const { cart } = useCartSelector(state => state);
@@ -41,7 +33,7 @@ const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
     image,
   } = product;
 
-  const isProductInCard = Object.hasOwn(cart, id);
+  const isProductInCart = Object.hasOwn(cart, id);
   const cartProduct = {
     id,
     name,
@@ -107,45 +99,45 @@ const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
     <div
       className={classnames(
         {
-          [styles.sliderCardContainer]: isSlider,
-          [styles.container]: !isSlider,
+          [styles['slider-card-container']]: isSlider,
+          [styles['container']]: !isSlider,
         },
-        '__app-PhoneCard-container',
+        '__app-phone-card-container',
       )}
       data-cy="cardsContainer"
     >
-      <a href={link} className={styles.link}>
+      <a href={link} className={styles['link']}>
         <img
           className={classnames({
-            [styles.sliderCardImage]: isSlider,
-            [styles.image]: !isSlider,
+            [styles['slider-card-image']]: isSlider,
+            [styles['image']]: !isSlider,
           })}
-          src={`${image}`}
+          src={image}
           alt={name}
         />
       </a>
-      <a href={link} className={styles.name}>
+      <a href={link} className={styles['name']}>
         {name}
       </a>
-      <div className={styles.price}>
-        <span className={styles.currentPrice}>{`$${price}`}</span>
-        <span className={styles.fullPrice}>{`$${fullPrice}`}</span>
+      <div className={styles['price']}>
+        <span className={styles['current-price']}>{`$${price}`}</span>
+        <span className={styles['full-price']}>{`$${fullPrice}`}</span>
       </div>
-      <ul className={styles.detailsList}>
-        <li className={styles.detailsItem}>
-          <span className={styles.detailsTitle}>Screen</span>
+      <ul className={styles['details-list']}>
+        <li className={styles['details-item']}>
+          <span className={styles['details-title']}>Screen</span>
           <span>{screen}</span>
         </li>
-        <li className={styles.detailsItem}>
-          <span className={styles.detailsTitle}>Capacity</span>
+        <li className={styles['details-item']}>
+          <span className={styles['details-title']}>Capacity</span>
           <span>{capacity}</span>
         </li>
-        <li className={styles.detailsItem}>
-          <span className={styles.detailsTitle}>RAM</span>
+        <li className={styles['details-item']}>
+          <span className={styles['details-title']}>RAM</span>
           <span>{ram}</span>
         </li>
       </ul>
-      <div className={styles.buttons}>
+      <div className={styles['buttons']}>
         <Button
           onClick={() => {
             if (isSignedIn) {
@@ -159,14 +151,14 @@ const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
               navigate('/signin/');
             }
           }}
-          isSelected={isProductInCard}
-          className={styles.addToCard}
-          title={isProductInCard ? 'Added to cart' : 'Add to cart'}
-          isDisabled={isProductInCard}
+          isSelected={isProductInCart}
+          className={styles['add-to-card']}
+          title={isProductInCart ? 'Added to cart' : 'Add to cart'}
+          isDisabled={isProductInCart}
         />
         <Icon
           onClick={handleFavoriteClick}
-          className={styles.addToFavorite}
+          className={styles['add-to-favorite']}
           iconId={icon}
         />
       </div>

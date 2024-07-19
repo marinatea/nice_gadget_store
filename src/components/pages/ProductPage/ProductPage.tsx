@@ -48,28 +48,28 @@ const ProductPage: React.FC<Props> = ({ productType }) => {
   }, [dispatch, navigate, productId, productType]);
 
   return (
-    <main className={styles.productPage}>
+    <main className={styles['product-page']}>
       <Breadcrumbs />
-      <h1 className={styles.title}>{product?.name}</h1>
+      <h1 className={styles['title']}>{product?.name}</h1>
       {isLoading && <Loader />}
-      <div className={styles.photos}>
+      <div className={styles['photos']}>
         <ImagesSelector images={product?.images} />
       </div>
 
-      <div className={styles.actions}>
+      <div className={styles['actions']}>
         <Actions
           product={product as IProductDetails}
           productType={productType}
           productWithoutDetails={productWithoutDetails}
         />
       </div>
-      <div className={styles.about}>
+      <div className={styles['about']}>
         <About product={product as IProductDetails} />
       </div>
-      <div className={styles.specs}>
+      <div className={styles['specs']}>
         <TechSpecs product={product as IProductDetails} />
       </div>
-      <div className={styles.suggested}>
+      <div className={styles['suggested']}>
         <ProductsSlider
           products={recommendedProducts}
           title="You may also like"

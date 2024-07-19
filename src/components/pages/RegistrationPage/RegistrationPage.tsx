@@ -12,27 +12,27 @@ const RegistrationPage: React.FC = () => {
 
   return (
     <div className={styles.main}>
-      <div className={styles.registerContainer}>
+      <div className={styles['register-container']}>
         <Breadcrumbs />
-        <h2 className={styles.registerTitle}>Register</h2>
-        <form className={styles.registerForm}>
-          <div className={styles.formGroup}>
+        <h2 className={styles['register-title']}>Register</h2>
+        <form className={styles['register-form']}>
+          <div className={styles['form-group']}>
             <label htmlFor="name">Name</label>
             <input type="name" id="name" name="name" required />
           </div>
-          <div className={styles.formGroup}>
+          <div className={styles['form-group']}>
             <label htmlFor="last-name">Last Name</label>
             <input type="last-name" id="last-name" name="last-name" required />
           </div>
-          <div className={styles.formGroup}>
+          <div className={styles['form-group']}>
             <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" required />
           </div>
-          <div className={styles.formGroup}>
+          <div className={styles['form-group']}>
             <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" required />
           </div>
-          <div className={styles.formGroup}>
+          <div className={styles['form-group']}>
             <label htmlFor="confirm-password">Confirm Password</label>
             <input
               type="confirm-password"
@@ -44,13 +44,13 @@ const RegistrationPage: React.FC = () => {
           <Button
             type="primary"
             title="Register"
-            className={styles.registerRedirectButton}
+            className={styles['register-redirect-button']}
             onClick={() => {}}
           />
           <Button
             type="primary"
             title="Login"
-            className={styles.loginButton}
+            className={styles['login-button']}
             onClick={handleLoginClick}
           />
         </form>

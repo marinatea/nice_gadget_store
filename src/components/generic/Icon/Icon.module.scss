@@ -1,6 +1,10 @@
-.container {
+.icon-container {
   width: 16px;
   height: 16px;
   fill: #333;
+}
 
+.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

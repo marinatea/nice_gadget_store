@@ -4,7 +4,7 @@
 @use "/src/utils/desktopHeaderFonts.scss" as dHF;
 @use "/src/constants/colors.module" as color;
 
-.cartPage {
+.cart-page {
   display: grid;
   min-height: 100vh;
   place-content: start center;
@@ -37,44 +37,44 @@
     color: color.$primary;
   }
 
-  .cardsContainer {
+  .cards-container {
     grid-column: span 4;
     margin-top: 32px;
   }
 
-  .cartIsEmpty {
+  .cart-is-empty {
     grid-column: span 4;
     margin-top: 32px;
     height: 50vh;
   }
 
-  .cardContainer {
+  .card-container {
     &:not(:first-child) {
       margin-top: 16px;
     }
   }
 
-  .checkoutContainer {
+  .checkout-container {
     grid-column: span 4;
     margin-top: 32px;
     padding: 24px;
     text-align: center;
 
-    .infoContainer {
-      .cashInfo {
+    .info-container {
+      .cash-info {
         color: color.$primary;
 
         @include dHF.h2-font;
       }
 
-      .itemInfo {
+      .item-info {
         color: color.$secondary;
 
         @include mF.body-font;
       }
     }
 
-    .checkoutButton {
+    .checkout-button {
       margin-top: 32px;
       width: 100%;
       height: 48px;
@@ -91,12 +91,14 @@
     grid-column: span 12;
   }
 
-  .cardsContainer {
+  .cards-container {
     grid-column: span 12;
     margin-top: 32px;
+    justify-content: center;
+    display: flex;
   }
 
-  .checkoutContainer {
+  .checkout-container {
     grid-column: span 12;
   }
 }
@@ -110,12 +112,12 @@
     grid-column: span 24;
   }
 
-  .cardsContainer {
+  .cards-container {
     grid-column: span 16;
     margin-top: 32px;
   }
 
-  .checkoutContainer {
+  .checkout-container {
     grid-column: span 8;
   }
 }

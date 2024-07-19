@@ -2,7 +2,7 @@
 @use "/src/utils/miscFonts" as mF;
 @use "/src/constants/colors.module" as color;
 
-.footerWrapper {
+.footer-wrapper {
   z-index: 999;
   margin-top: 80px;
   border-top: 1px solid color.$elements;
@@ -81,8 +81,6 @@
     color: color.$secondary;
     text-decoration: none;
     text-transform: uppercase;
-
-    @include mF.uppercase-font;
   }
 }
 

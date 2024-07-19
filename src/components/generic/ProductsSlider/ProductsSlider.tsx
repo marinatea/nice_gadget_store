@@ -1,16 +1,14 @@
-/* eslint-disable max-len */
+import React, { useEffect, useState } from 'react';
+import classNames from 'classnames';
+import { Icons, ProductT } from '../../../types';
+import Button from '../Button/Button';
+import ProductCard from '../../pages/ProductTypePage/components/ProductCard/ProductCard';
+import styles from './ProductsSlider.module.scss';
+
 type Props = {
   title: string;
   products: ProductT[];
 };
-
-import { Icons, ProductT } from '../../../types';
-import React, { useEffect, useState } from 'react';
-
-import Button from '../Button/Button';
-import ProductCard from '../../pages/ProductTypePage/components/ProductCard/ProductCard';
-import classNames from 'classnames';
-import styles from './ProductsSlider.module.scss';
 
 const ProductsSlider: React.FC<Props> = ({ title, products }) => {
   const [translate, setTranslate] = useState(0);
@@ -86,13 +84,13 @@ const ProductsSlider: React.FC<Props> = ({ title, products }) => {
   const leftClickDisabled = translate <= 0;
 
   return (
-    <div className={styles.productsSlider}>
-      <div className={styles.productsSlider__top}>
-        <h1 className={styles.productsSlider__topTitle}>{title}</h1>
-        <div className={styles.productsSlider__topButtons}>
+    <div className={styles['products-slider']}>
+      <div className={styles['products-slider__top']}>
+        <h1 className={styles['products-slider__top-title']}>{title}</h1>
+        <div className={styles['products-slider__top-buttons']}>
           <Button
-            className={classNames(styles.productsSlider__topButton, {
-              [styles.smallButtonDisabled]: leftClickDisabled,
+            className={classNames(styles['products-slider__top-button'], {
+              [styles['small-button-disabled']]: leftClickDisabled,
             })}
             onClick={onLeftClick}
             isDisabled={leftClickDisabled}
@@ -100,8 +98,8 @@ const ProductsSlider: React.FC<Props> = ({ title, products }) => {
             type="secondary"
           />
           <Button
-            className={classNames(styles.productsSlider__topButton, {
-              [styles.smallButtonDisabled]: rightClickDisabled,
+            className={classNames(styles['products-slider__top-button'], {
+              [styles['small-button-disabled']]: rightClickDisabled,
             })}
             onClick={onRightClick}
             isDisabled={rightClickDisabled}
@@ -110,9 +108,9 @@ const ProductsSlider: React.FC<Props> = ({ title, products }) => {
           />
         </div>
       </div>
-      <div className={styles.productsSlider__wrapper}>
+      <div className={styles['products-slider__wrapper']}>
         <div
-          className={styles.productsSlider__content}
+          className={styles['products-slider__content']}
           style={{
             transform: `translateX(-${translate}px)`,
             width: `${sliderWidth}px`,

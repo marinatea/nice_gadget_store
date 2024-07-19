@@ -141,20 +141,20 @@ const Actions: React.FC<Props> = ({
   };
 
   return (
-    <div className={style.container}>
-      <div className={style.wrapper}>
-        <div className={style.colors}>
-          <span className={style.label}>Available colors</span>
-          <ul className={style.list}>
+    <div className={style['container']}>
+      <div className={style['wrapper']}>
+        <div className={style['colors']}>
+          <span className={style['label']}>Available colors</span>
+          <ul className={style['list']}>
             {colorsAvailable.map(color => (
-              <li key={color} className={style.item}>
+              <li key={color} className={style['item']}>
                 <Link
                   to={`/${productType}/${getProductLink({
                     id,
                     newPart: color,
                   })}`}
-                  className={classnames(style.colorsLink, {
-                    [style.activeLink]: color === activeColor,
+                  className={classnames(style['colors-link'], {
+                    [style['active-link']]: color === activeColor,
                   })}
                   style={{ backgroundColor: AVAILABLE_COLORS[color] || color }}
                 />
@@ -162,11 +162,11 @@ const Actions: React.FC<Props> = ({
             ))}
           </ul>
         </div>
-        <div className={style.capacity}>
-          <span className={style.label}>Select capacity</span>
-          <ul className={style.list}>
+        <div className={style['capacity']}>
+          <span className={style['label']}>Select capacity</span>
+          <ul className={style['list']}>
             {capacityAvailable.map(capacityItem => (
-              <li key={capacityItem} className={style.item}>
+              <li key={capacityItem} className={style['item']}>
                 <Link
                   to={`/${productType}/${getProductLink({
                     id,
@@ -177,8 +177,8 @@ const Actions: React.FC<Props> = ({
                   <Button
                     title={capacityItem}
                     type={capacityItem === capacity ? 'primary' : 'secondary'}
-                    className={classnames(style.capacityButton, {
-                      [style.capacityButtonActive]: capacityItem === capacity,
+                    className={classnames(style['capacity-button'], {
+                      [style['capacity-button-active']]: capacityItem === capacity,
                     })}
                   />
                 </Link>
@@ -186,11 +186,11 @@ const Actions: React.FC<Props> = ({
             ))}
           </ul>
         </div>
-        <div className={style.price}>
+        <div className={style['price']}>
           <span>{`$${priceDiscount}`}</span>
-          <span className={style.priceRegular}>{`$${priceRegular}`}</span>
+          <span className={style['price-regular']}>{`$${priceRegular}`}</span>
         </div>
-        <div className={style.actions}>
+        <div className={style['actions']}>
           <Button
             onClick={() => {
               if (isSignedIn) {
@@ -205,20 +205,20 @@ const Actions: React.FC<Props> = ({
               }
             }}
             isSelected={isProductInCard}
-            className={style.addToCard}
+            className={style['add-to-card']}
             title={isProductInCard ? 'Added to cart' : 'Add to cart'}
           />
           <Button
             onClick={toggleProductFavorites}
             type="secondary"
-            className={style.addToFavorite}
+            className={style['add-to-favorite']}
             icon={icon}
           />
         </div>
         <ul>
           {infoItems.map(({ title, value }) => (
-            <li className={style.infoItem} key={value}>
-              <span className={style.infoTitle}>{title}</span>
+            <li className={style['info-item']} key={value}>
+              <span className={style['info-title']}>{title}</span>
               <span>{value}</span>
             </li>
           ))}
