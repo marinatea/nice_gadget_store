@@ -14,7 +14,7 @@ if (!PUBLISHABLE_KEY) {
 createRoot(document.getElementById('root') as HTMLElement).render(
 <Provider store={store}>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/nice_gadget_store">
         <App />
       </BrowserRouter>
     </ClerkProvider>
