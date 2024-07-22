@@ -1,8 +1,6 @@
 /* eslint-disable max-len */
 import './reset.scss';
-
 import { Route, Routes } from 'react-router-dom';
-
 import CartPage from './components/pages/CartPage/CartPage';
 import FavoritesPage from './components/pages/FavoritesPage/FavoritesPage';
 import HomePage from './components/pages/HomePage/HomePage';
@@ -33,34 +31,34 @@ export const App = () => {
   }, [dispatch, user]);
 
   return (
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          {['phones', 'tablets', 'accessories'].map(productType => (
-            <Route key={productType} path={productType}>
-              <Route
-                index
-                element={
-                  <ProductTypePage
-                    productsType={
-                      productType as 'phones' | 'tablets' | 'accessories'
-                    }
-                  />
-                }
-              />
-              <Route
-                path=":productId"
-                element={
-                  <ProductPage
-                    productType={
-                      productType as 'phones' | 'tablets' | 'accessories'
-                    }
-                  />
-                }
-              />
-            </Route>
-          ))}
-         <Route
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        {['phones', 'tablets', 'accessories'].map(productType => (
+          <Route key={productType} path={productType}>
+            <Route
+              index
+              element={
+                <ProductTypePage
+                  productsType={
+                    productType as 'phones' | 'tablets' | 'accessories'
+                  }
+                />
+              }
+            />
+            <Route
+              path=":productId"
+              element={
+                <ProductPage
+                  productType={
+                    productType as 'phones' | 'tablets' | 'accessories'
+                  }
+                />
+              }
+            />
+          </Route>
+        ))}
+        <Route
           path="cart"
           element={<ProtectedRoute element={<CartPage />} />}
         />
@@ -74,6 +72,6 @@ export const App = () => {
         <Route path="signup" element={<SignUpPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
-      </Routes>
+    </Routes>
   );
 };
