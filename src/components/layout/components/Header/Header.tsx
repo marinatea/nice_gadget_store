@@ -14,7 +14,11 @@ import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import Loader from '../../../generic/Loader/Loader';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  children?: React.ReactNode;
+}
+
+const Header: React.FC<HeaderProps> = ({ children }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [icon, setIcon] = useState(isNavbarOpen ? Icons.CLOSE : Icons.BURGER);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -50,6 +54,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles['header']}>
+      {children}
       <NavLink to="/">
         <img
           className={styles['header-logo']}

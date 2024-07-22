@@ -20,6 +20,7 @@ import { setFavorites } from './slices/favoriteSlice';
 import { useAppDispatch } from './hooks/reduxHooks';
 import { useEffect } from 'react';
 import { useUser } from '@clerk/clerk-react';
+import ProtectedRoute from './components/pages/ProtectedRoute/ProtectedRoute';
 
 export const App = () => {
   const dispatch = useAppDispatch();
@@ -59,14 +60,20 @@ export const App = () => {
               />
             </Route>
           ))}
-          <Route path="cart" element={<CartPage />} />
-          <Route path="favorites" element={<FavoritesPage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="registration" element={<RegistrationPage />} />
-          <Route path="signin" element={<SignInPage />} />
-          <Route path="signup" element={<SignUpPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
+         <Route
+          path="cart"
+          element={<ProtectedRoute element={<CartPage />} />}
+        />
+        <Route
+          path="favorites"
+          element={<ProtectedRoute element={<FavoritesPage />} />}
+        />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="registration" element={<RegistrationPage />} />
+        <Route path="signin" element={<SignInPage />} />
+        <Route path="signup" element={<SignUpPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
       </Routes>
   );
 };
