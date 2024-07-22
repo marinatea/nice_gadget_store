@@ -7,7 +7,7 @@ const RegistrationPage: React.FC = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/login');
+    navigate('/nice_gadget_store/login');
   };
 
   return (

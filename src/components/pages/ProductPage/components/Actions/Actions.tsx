@@ -13,7 +13,6 @@ import { useEffect, useState } from 'react';
 
 import Button from '../../../../generic/Button/Button';
 import { addToCart } from '../../../../../slices/cartSlice';
-// import { addToFavorites } from '../../../../../slices/favoriteSlice';
 import classnames from 'classnames';
 import getProductLink from '../../../../../utils/getProductLink';
 import style from './Actions.module.scss';
