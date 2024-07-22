@@ -34,7 +34,7 @@ npm install npm@latest -g
 Clone the repo
 
 ```bash
-git clone https://github.com/marinatea/phone_cat_front
+git clone https://github.com/marinatea/nice_gadget_store
 ```
 Install NPM packages
 
