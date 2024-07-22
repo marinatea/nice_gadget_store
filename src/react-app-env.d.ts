@@ -1,6 +1,6 @@
 // / <reference types="react-scripts" />
 interface ImportMetaEnv {
-  readonly REACT_CLERK_PUBLISHABLE_KEY: string;
+  readonly REACT_APP_CLERK_PUBLISHABLE_KEY: string;
   // add more environment variables here as needed
 }
 
