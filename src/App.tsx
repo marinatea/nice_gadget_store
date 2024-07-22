@@ -63,8 +63,8 @@ export const App = () => {
           <Route path="favorites" element={<FavoritesPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="registration" element={<RegistrationPage />} />
-          <Route path="signin" element={<SignInPage />} />
-          <Route path="signup" element={<SignUpPage />} />
+          <Route path="sign-in" element={<SignInPage />} />
+          <Route path="sign-up" element={<SignUpPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

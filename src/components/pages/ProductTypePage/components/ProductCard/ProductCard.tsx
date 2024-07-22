@@ -89,7 +89,7 @@ const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
         setIcon(Icons.HEART_FILL);
       }
     } else {
-      navigate('/signin/');
+      navigate('/sign-in/');
     }
   };
 
@@ -148,7 +148,7 @@ const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
                 }),
               );
             } else {
-              navigate('/signin/');
+              navigate('/sign-in/');
             }
           }}
           isSelected={isProductInCart}
