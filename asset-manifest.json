@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/phone_cat_front/static/css/main.cbf51156.css",
-    "main.js": "/phone_cat_front/static/js/main.c86de1b4.js",
-    "static/media/Mont-Regular.otf": "/phone_cat_front/static/media/Mont-Regular.1d26d89f7339866d3133.otf",
-    "static/media/Mont-SemiBold.otf": "/phone_cat_front/static/media/Mont-SemiBold.8979d71a3146ca1d761f.otf",
-    "static/media/Mont-Bold.otf": "/phone_cat_front/static/media/Mont-Bold.03c8c2f6127c1da0fc39.otf",
-    "index.html": "/phone_cat_front/index.html",
-    "main.cbf51156.css.map": "/phone_cat_front/static/css/main.cbf51156.css.map",
-    "main.c86de1b4.js.map": "/phone_cat_front/static/js/main.c86de1b4.js.map"
+    "main.css": "/nice_gadget_store/static/css/main.b3e2bb28.css",
+    "main.js": "/nice_gadget_store/static/js/main.c86de1b4.js",
+    "static/media/Mont-Regular.otf": "/nice_gadget_store/static/media/Mont-Regular.1d26d89f7339866d3133.otf",
+    "static/media/Mont-SemiBold.otf": "/nice_gadget_store/static/media/Mont-SemiBold.8979d71a3146ca1d761f.otf",
+    "static/media/Mont-Bold.otf": "/nice_gadget_store/static/media/Mont-Bold.03c8c2f6127c1da0fc39.otf",
+    "index.html": "/nice_gadget_store/index.html",
+    "main.b3e2bb28.css.map": "/nice_gadget_store/static/css/main.b3e2bb28.css.map",
+    "main.c86de1b4.js.map": "/nice_gadget_store/static/js/main.c86de1b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbf51156.css",
+    "static/css/main.b3e2bb28.css",
     "static/js/main.c86de1b4.js"
   ]
 }
