@@ -90,7 +90,7 @@ const Actions: React.FC<Props> = ({
         setIcon(Icons.HEART_FILL);
       }
     } else {
-      navigate('/sign-in/');
+      navigate('/signin/');
     }
   };
 
@@ -200,7 +200,7 @@ const Actions: React.FC<Props> = ({
                   }),
                 );
               } else {
-                navigate('/sign-in/');
+                navigate('/signin/');
               }
             }}
             isSelected={isProductInCard}

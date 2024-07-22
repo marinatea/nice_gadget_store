@@ -4,7 +4,7 @@ import styles from './SignUpPage.module.scss';
 const SignUpPage: React.FC = () => {
   return (
     <div className={styles['sign-up-page']}>
-      <SignUp signInUrl="/nice_gadget_store/sign-in" />
+      <SignUp signInUrl="/nice_gadget_store/signin" />
     </div>
   );
 };

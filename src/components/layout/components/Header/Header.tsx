@@ -100,7 +100,7 @@ const Header: React.FC = () => {
           <SignedOut>
             <li>
               <NavLink
-                to="/sign-in"
+                to="/signin"
                 className={({ isActive }) => (isActive ? styles['active'] : '')}
               >
                 Sign In
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <NavLink
-                to="/sign-up"
+                to="/signup"
                 className={({ isActive }) => (isActive ? styles['active'] : '')}
               >
                 Sign Up
