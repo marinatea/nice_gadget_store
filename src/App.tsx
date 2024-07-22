@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import './reset.scss';
 
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import CartPage from './components/pages/CartPage/CartPage';
 import FavoritesPage from './components/pages/FavoritesPage/FavoritesPage';
@@ -23,7 +23,6 @@ import { useUser } from '@clerk/clerk-react';
 
 export const App = () => {
   const dispatch = useAppDispatch();
-
   const { user } = useUser();
 
   useEffect(() => {
@@ -33,7 +32,6 @@ export const App = () => {
   }, [dispatch, user]);
 
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -70,6 +68,5 @@ export const App = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </Router>
   );
 };
