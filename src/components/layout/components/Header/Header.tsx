@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   SignOutButton,
   SignedIn,
   SignedOut,
   useSession,
-} from '@clerk/clerk-react';
+} from "@clerk/clerk-react";
 
-import CartBadge from '../../../generic/Badge/Badge';
-import FavoriteBadge from '../../../generic/FavoriteBadge/FavoriteBadge';
-import Icon from '../../../generic/Icon/Icon';
-import { Icons } from '../../../../types';
-import { NavLink } from 'react-router-dom';
-import styles from './Header.module.scss';
-import Loader from '../../../generic/Loader/Loader';
+import CartBadge from "../../../generic/Badge/Badge";
+import FavoriteBadge from "../../../generic/FavoriteBadge/FavoriteBadge";
+import Icon from "../../../generic/Icon/Icon";
+import { Icons } from "../../../../types";
+import { NavLink } from "react-router-dom";
+import styles from "./Header.module.scss";
+import Loader from "../../../generic/Loader/Loader";
 
 const Header: React.FC = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -37,10 +37,10 @@ const Header: React.FC = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -52,22 +52,20 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <NavLink to="/">
         <img
-          className={styles.divLogo}
-          src={
-            'https://storage.googleapis.com/group_project_images/img/Logo.png'
-          }
+          className={styles["div-logo"]}
+          src="https://storage.googleapis.com/group_project_images/img/Logo.png"
           alt="logo"
         />
       </NavLink>
       <nav
-        className={`${styles.navbar} ${isNavbarOpen ? styles.navbar_active : ''}`}
+        className={`${styles.navbar} ${isNavbarOpen ? styles["navbar-active"] : ""}`}
       >
-        <ul className={styles.navlinks}>
+        <ul className={styles["navlinks"]}>
           <li>
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => (isActive ? styles.active : "")}
             >
               Home
             </NavLink>
@@ -76,7 +74,7 @@ const Header: React.FC = () => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/phones"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => (isActive ? styles.active : "")}
             >
               Phones
             </NavLink>
@@ -85,7 +83,7 @@ const Header: React.FC = () => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/tablets"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => (isActive ? styles.active : "")}
             >
               Tablets
             </NavLink>
@@ -94,7 +92,7 @@ const Header: React.FC = () => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/accessories"
-              className={({ isActive }) => (isActive ? styles.active : '')}
+              className={({ isActive }) => (isActive ? styles.active : "")}
             >
               Accessories
             </NavLink>
@@ -103,7 +101,7 @@ const Header: React.FC = () => {
             <li>
               <NavLink
                 to="/signin"
-                className={({ isActive }) => (isActive ? styles.active : '')}
+                className={({ isActive }) => (isActive ? styles.active : "")}
               >
                 SignIn
               </NavLink>
@@ -111,9 +109,9 @@ const Header: React.FC = () => {
             <li>
               <NavLink
                 to="/signup"
-                className={({ isActive }) => (isActive ? styles.active : '')}
+                className={({ isActive }) => (isActive ? styles.active : "")}
               >
-                SigneUp
+                SignUp
               </NavLink>
             </li>
           </SignedOut>
@@ -127,17 +125,17 @@ const Header: React.FC = () => {
 
           {isNavbarOpen && (
             <>
-              <div className={styles.burgerIcons}>
+              <div className={styles["burger-icons"]}>
                 <NavLink
                   to="/favorites"
-                  className={styles.burgerIcon}
+                  className={styles["burger-icon"]}
                   onClick={() => setIsNavbarOpen(false)}
                 >
                   <Icon iconId={Icons.HEART} className={styles.heart} />
                 </NavLink>
                 <NavLink
                   to="/cart"
-                  className={styles.burgerIcon}
+                  className={styles["burger-icon"]}
                   onClick={() => setIsNavbarOpen(!isNavbarOpen)}
                 >
                   <Icon iconId={Icons.CART} className={styles.cart} />
