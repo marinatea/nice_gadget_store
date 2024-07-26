@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A description of your project",
   "main": "index.js",
-  "homepage": "http://twoj-login.github.io/nazwa-repozytorium",
+  "homepage": "http://marinatea.github.io/nice_gadget_store",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
