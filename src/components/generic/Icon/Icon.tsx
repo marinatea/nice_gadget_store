@@ -1,5 +1,5 @@
-import classnames from "classnames";
-import styles from "./Icon.module.scss";
+import classnames from 'classnames';
+import styles from './Icon.module.scss';
 
 interface Props {
   iconId: string;
@@ -8,16 +8,11 @@ interface Props {
   disabled?: boolean;
 }
 
-const Icon: React.FC<Props> = ({
-  iconId,
-  className,
-  onClick,
-  disabled,
-}) => {
+const Icon: React.FC<Props> = ({ iconId, className, onClick, disabled }) => {
   return (
     <svg
-      className={classnames(styles["icon"], className, {
-        [styles["is-disabled"]]: disabled,
+      className={classnames(styles['icon'], className, {
+        [styles['is-disabled']]: disabled,
       })}
       onClick={!disabled ? onClick : undefined}
     >

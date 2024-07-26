@@ -3,7 +3,7 @@ import styles from './Badge.module.scss';
 import { useCartSelector } from '../../../hooks/reduxHooks';
 
 const CartBadge: React.FC = () => {
-  const { cart } = useCartSelector(state => state);
+  const { cart } = useCartSelector((state) => state);
 
   const itemCount = Object.values(cart).reduce(
     (totalCount, item) => totalCount + item.count,

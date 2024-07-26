@@ -1,7 +1,7 @@
-@use "/src/utils/mediaQueries.module.scss" as mQ;
-@use "/src/utils/mobileHeaderFonts.scss" as mHF;
-@use "/src/utils/miscFonts.scss" as mF;
-@use "/src/constants/colors.module.scss" as cM;
+@use '/src/utils/mediaQueries.module.scss' as mQ;
+@use '/src/utils/mobileHeaderFonts.scss' as mHF;
+@use '/src/utils/miscFonts.scss' as mF;
+@use '/src/constants/colors.module.scss' as cM;
 
 .custom-select {
   position: relative;
@@ -33,7 +33,7 @@
       border-bottom: 2px solid cM.$secondary;
       width: 8px;
       height: 8px;
-      content: "";
+      content: '';
     }
   }
 

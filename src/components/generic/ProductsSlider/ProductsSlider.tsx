@@ -48,7 +48,7 @@ const ProductsSlider: React.FC<Props> = ({ title, products }) => {
         0,
       );
 
-      setTranslate(prevTranslate => Math.min(prevTranslate, maxTranslate));
+      setTranslate((prevTranslate) => Math.min(prevTranslate, maxTranslate));
     };
 
     handleResize();
@@ -64,13 +64,13 @@ const ProductsSlider: React.FC<Props> = ({ title, products }) => {
   );
 
   const onLeftClick = () => {
-    setTranslate(prevTranslate =>
+    setTranslate((prevTranslate) =>
       Math.max(prevTranslate - (cardWidth + 16) * visibleCards, 0),
     );
   };
 
   const onRightClick = () => {
-    setTranslate(prevTranslate =>
+    setTranslate((prevTranslate) =>
       Math.min(prevTranslate + (cardWidth + 16) * visibleCards, maxTranslate),
     );
   };
@@ -116,7 +116,7 @@ const ProductsSlider: React.FC<Props> = ({ title, products }) => {
             width: `${sliderWidth}px`,
           }}
         >
-          {products.map(product => (
+          {products.map((product) => (
             <ProductCard key={product.id} product={product} isSlider={true} />
           ))}
         </div>

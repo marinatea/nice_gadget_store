@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Icons, ProductT } from '../../../../../types';
-import { addToFavorites, removeFromFavorites } from '../../../../../slices/favoriteSlice';
-import { useAppDispatch, useCartSelector, useFavoritesSelector } from '../../../../../hooks/reduxHooks';
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from '../../../../../slices/favoriteSlice';
+import {
+  useAppDispatch,
+  useCartSelector,
+  useFavoritesSelector,
+} from '../../../../../hooks/reduxHooks';
 import Button from '../../../../generic/Button/Button';
 import Icon from '../../../../generic/Icon/Icon';
 import classnames from 'classnames';
@@ -16,8 +23,8 @@ interface Props {
 }
 
 const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
-  const { cart } = useCartSelector(state => state);
-  const { favorites } = useFavoritesSelector(state => state);
+  const { cart } = useCartSelector((state) => state);
+  const { favorites } = useFavoritesSelector((state) => state);
   const dispatch = useAppDispatch();
   const { user, isSignedIn } = useUser();
   const navigate = useNavigate();
@@ -56,7 +63,7 @@ const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
     image: product.image,
   };
 
-  const isProductInFavorites = favorites.some(item => item.name === name);
+  const isProductInFavorites = favorites.some((item) => item.name === name);
 
   const [icon, setIcon] = useState(
     isProductInFavorites ? Icons.HEART_FILL : Icons.HEART,
@@ -64,7 +71,7 @@ const ProductCard: React.FC<Props> = ({ product, isSlider }) => {
 
   useEffect(() => {
     setIcon(
-      favorites.some(item => item.name === name)
+      favorites.some((item) => item.name === name)
         ? Icons.HEART_FILL
         : Icons.HEART,
     );

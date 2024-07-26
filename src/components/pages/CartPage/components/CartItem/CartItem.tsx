@@ -15,17 +15,17 @@ import styles from './CartItem.module.scss';
 import { useUser } from '@clerk/clerk-react';
 
 const CartItem: React.FC = () => {
-  const { cart } = useCartSelector(state => state);
+  const { cart } = useCartSelector((state) => state);
   const dispatch = useAppDispatch();
   const { user } = useUser();
-  const { allProducts } = useProductsSelector(state => state);
+  const { allProducts } = useProductsSelector((state) => state);
 
   const productForLink = (prod: ICartProduct) =>
     allProducts.find((p: ProductT) => p.name === prod.name);
 
   return (
     <div className={styles['cart-item-container']}>
-      {Object.values(cart).map(product => {
+      {Object.values(cart).map((product) => {
         return (
           <div className={styles['cart-item']} key={product.id}>
             <div className={styles['first-row']}>

@@ -83,8 +83,8 @@ const ordersSlice = createSlice({
       orders: action.payload,
     }),
   },
-  extraReducers: builder => {
-    builder.addCase(fetchOrders.pending, state => {
+  extraReducers: (builder) => {
+    builder.addCase(fetchOrders.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(fetchOrders.fulfilled, (state, action) => {
@@ -95,7 +95,7 @@ const ordersSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(addOrder.pending, state => {
+    builder.addCase(addOrder.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(addOrder.fulfilled, (state, action) => {
@@ -106,13 +106,13 @@ const ordersSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(updateOrder.pending, state => {
+    builder.addCase(updateOrder.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(updateOrder.fulfilled, (state, action) => {
       state.isLoading = false;
       const index = state.orders.findIndex(
-        order => order.id === action.payload.id,
+        (order) => order.id === action.payload.id,
       );
 
       if (index !== -1) {
@@ -123,13 +123,13 @@ const ordersSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(deleteOrder.pending, state => {
+    builder.addCase(deleteOrder.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(deleteOrder.fulfilled, (state, action) => {
       state.isLoading = false;
       state.orders = state.orders.filter(
-        order => order.id !== action.payload.id,
+        (order) => order.id !== action.payload.id,
       );
     });
     builder.addCase(deleteOrder.rejected, (state, action) => {

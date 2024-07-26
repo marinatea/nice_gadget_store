@@ -44,14 +44,14 @@ const Actions: React.FC<Props> = ({
   productWithoutDetails,
   productType,
 }) => {
-  const { cart } = useCartSelector(state => state);
-  const { favorites } = useFavoritesSelector(state => state);
+  const { cart } = useCartSelector((state) => state);
+  const { favorites } = useFavoritesSelector((state) => state);
   const dispatch = useAppDispatch();
   const { user, isSignedIn } = useUser();
   const navigate = useNavigate();
 
   const isProductInFavorites = favorites.some(
-    item => item.itemId === product?.id,
+    (item) => item.itemId === product?.id,
   );
 
   const [icon, setIcon] = useState(
@@ -60,7 +60,7 @@ const Actions: React.FC<Props> = ({
 
   useEffect(() => {
     setIcon(
-      favorites.some(item => item.name === product?.name)
+      favorites.some((item) => item.name === product?.name)
         ? Icons.HEART_FILL
         : Icons.HEART,
     );
@@ -145,7 +145,7 @@ const Actions: React.FC<Props> = ({
         <div className={style['colors']}>
           <span className={style['label']}>Available colors</span>
           <ul className={style['list']}>
-            {colorsAvailable.map(color => (
+            {colorsAvailable.map((color) => (
               <li key={color} className={style['item']}>
                 <Link
                   to={`/${productType}/${getProductLink({
@@ -164,7 +164,7 @@ const Actions: React.FC<Props> = ({
         <div className={style['capacity']}>
           <span className={style['label']}>Select capacity</span>
           <ul className={style['list']}>
-            {capacityAvailable.map(capacityItem => (
+            {capacityAvailable.map((capacityItem) => (
               <li key={capacityItem} className={style['item']}>
                 <Link
                   to={`/${productType}/${getProductLink({
@@ -177,7 +177,8 @@ const Actions: React.FC<Props> = ({
                     title={capacityItem}
                     type={capacityItem === capacity ? 'primary' : 'secondary'}
                     className={classnames(style['capacity-button'], {
-                      [style['capacity-button-active']]: capacityItem === capacity,
+                      [style['capacity-button-active']]:
+                        capacityItem === capacity,
                     })}
                   />
                 </Link>

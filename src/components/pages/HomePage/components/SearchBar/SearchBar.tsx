@@ -10,7 +10,7 @@ const SearchBar: React.FC = () => {
   const [search, setSearch] = useState('');
   const inputContainerRef = useRef<HTMLDivElement>(null);
 
-  const { allProducts } = useProductsSelector(state => state);
+  const { allProducts } = useProductsSelector((state) => state);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -32,7 +32,7 @@ const SearchBar: React.FC = () => {
   const displayProducts = useMemo(() => {
     const lowSearch = search.toLowerCase().trim();
 
-    return allProducts.filter(product =>
+    return allProducts.filter((product) =>
       product.name.toLowerCase().includes(lowSearch),
     );
   }, [allProducts, search]);
@@ -61,7 +61,7 @@ const SearchBar: React.FC = () => {
         />
         {isListOpen && (
           <div className={styles['items-container']}>
-            {displayProducts.map(product => (
+            {displayProducts.map((product) => (
               <Link
                 to={`/${product.category}/${product.itemId}`}
                 key={product.id}

@@ -12,7 +12,7 @@ import { addOrder } from '../../../slices/orderSlice';
 
 const CartPage: React.FC = () => {
   const [isCheckedOut, setIsCheckedOut] = useState(false);
-  const { cart } = useCartSelector(state => state);
+  const { cart } = useCartSelector((state) => state);
 
   const dispatch = useAppDispatch();
   const { user } = useUser();

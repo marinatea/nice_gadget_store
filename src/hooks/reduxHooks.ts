@@ -9,11 +9,11 @@ import { useSelector } from 'react-redux';
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 
 export const useProductsSelector = <T>(selector: (state: ProductsState) => T) =>
-  useSelector<RootState, T>(state => selector(state.products));
+  useSelector<RootState, T>((state) => selector(state.products));
 
 export const useCartSelector = <T>(selector: (state: CartState) => T) =>
-  useSelector<RootState, T>(state => selector(state.cart));
+  useSelector<RootState, T>((state) => selector(state.cart));
 
 export const useFavoritesSelector = <T>(
   selector: (state: FavoritesState) => T,
-) => useSelector<RootState, T>(state => selector(state.favorites));
+) => useSelector<RootState, T>((state) => selector(state.favorites));

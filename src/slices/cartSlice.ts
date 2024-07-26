@@ -91,8 +91,8 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {},
-  extraReducers: builder => {
-    builder.addCase(setCart.pending, state => {
+  extraReducers: (builder) => {
+    builder.addCase(setCart.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(setCart.fulfilled, (state, action) => {
@@ -107,7 +107,7 @@ const cartSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(addToCart.pending, state => {
+    builder.addCase(addToCart.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(addToCart.fulfilled, (state, action) => {
@@ -120,7 +120,7 @@ const cartSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(removeFromCart.pending, state => {
+    builder.addCase(removeFromCart.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(removeFromCart.fulfilled, (state, action) => {
@@ -133,7 +133,7 @@ const cartSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(patchCartItemCount.pending, state => {
+    builder.addCase(patchCartItemCount.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(patchCartItemCount.fulfilled, (state, action) => {

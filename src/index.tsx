@@ -30,5 +30,5 @@ const Root = () => {
 createRoot(document.getElementById('root') as HTMLElement).render(
   <Router>
     <Root />
-  </Router>
+  </Router>,
 );

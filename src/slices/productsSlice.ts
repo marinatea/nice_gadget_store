@@ -40,7 +40,7 @@ export const fetchProducts = createAsyncThunk(
 
     const [phones, tablets, accessories, allProducts, newModels, hotPrices] =
       await Promise.all([
-        ...productTypes.map(type =>
+        ...productTypes.map((type) =>
           fetch(`https://phone-catalog-back.onrender.com/${type}`),
         ),
         fetch('https://phone-catalog-back.onrender.com/products/new-models'),
@@ -171,8 +171,8 @@ const productsSlice = createSlice({
       state.accessories = action.payload.accessories;
     },
   },
-  extraReducers: builder => {
-    builder.addCase(fetchSortedProducts.pending, state => {
+  extraReducers: (builder) => {
+    builder.addCase(fetchSortedProducts.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(fetchSortedProducts.fulfilled, (state, action) => {
@@ -183,7 +183,7 @@ const productsSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(fetchProducts.pending, state => {
+    builder.addCase(fetchProducts.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
@@ -199,7 +199,7 @@ const productsSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(fetchProductByItemId.pending, state => {
+    builder.addCase(fetchProductByItemId.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(fetchProductByItemId.fulfilled, (state, action) => {
@@ -210,7 +210,7 @@ const productsSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message || 'Failed to fetch product';
     });
-    builder.addCase(fetchRecommendedProducts.pending, state => {
+    builder.addCase(fetchRecommendedProducts.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(fetchRecommendedProducts.fulfilled, (state, action) => {
@@ -222,7 +222,7 @@ const productsSlice = createSlice({
       state.error =
         action.error.message || 'Failed to fetch recommended products';
     });
-    builder.addCase(fetchProductById.pending, state => {
+    builder.addCase(fetchProductById.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(fetchProductById.fulfilled, (state, action) => {

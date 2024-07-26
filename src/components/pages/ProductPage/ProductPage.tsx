@@ -23,24 +23,24 @@ const ProductPage: React.FC<Props> = ({ productType }) => {
   const navigate = useNavigate();
   const { productId } = useParams<{ productId: string }>();
   const dispatch = useAppDispatch();
-  const isLoading = useProductsSelector(state => state.isLoading);
+  const isLoading = useProductsSelector((state) => state.isLoading);
   const productWithoutDetails = useProductsSelector(
-    state => state.selectedProduct,
+    (state) => state.selectedProduct,
   );
-  const product = useProductsSelector(state => state.selectedProductDetails);
+  const product = useProductsSelector((state) => state.selectedProductDetails);
   const recommendedProducts = useProductsSelector(
-    state => state.recommendedProducts,
+    (state) => state.recommendedProducts,
   );
 
   useEffect(() => {
     if (productId) {
       dispatch(fetchProductByItemId(productId))
         .unwrap()
-        .then(result => {
+        .then((result) => {
           dispatch(fetchProductById({ id: productId, category: productType }));
           dispatch(fetchRecommendedProducts(result.id));
         })
-        .catch(error => {
+        .catch((error) => {
           navigate('/product-not-found');
           throw new Error(error);
         });

@@ -52,15 +52,19 @@ const CustomSelect: React.FC<Props> = ({
   }, []);
 
   return (
-    <div className={`${styles['custom-select']} ${className}`} ref={dropdownRef}>
+    <div
+      className={`${styles['custom-select']} ${className}`}
+      ref={dropdownRef}
+    >
       <div className={styles['selected-option']} onClick={toggleDropdown}>
-        {value === undefined || !options.find(option => option.value === value)
+        {value === undefined ||
+        !options.find((option) => option.value === value)
           ? 'Select...'
-          : options.find(option => option.value === value)?.label}
+          : options.find((option) => option.value === value)?.label}
       </div>
       {isOpen && (
         <div className={styles['options-container']}>
-          {options.map(option => (
+          {options.map((option) => (
             <div
               key={option.value}
               className={`${styles.option} ${value === option.value ? styles.selected : ''}`}

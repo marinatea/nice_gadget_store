@@ -70,8 +70,8 @@ const favoritesSlice = createSlice({
       favorites: action.payload.products,
     }),
   },
-  extraReducers: builder => {
-    builder.addCase(setFavorites.pending, state => {
+  extraReducers: (builder) => {
+    builder.addCase(setFavorites.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(setFavorites.fulfilled, (state, action) => {
@@ -82,7 +82,7 @@ const favoritesSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(addToFavorites.pending, state => {
+    builder.addCase(addToFavorites.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(addToFavorites.fulfilled, (state, action) => {
@@ -93,7 +93,7 @@ const favoritesSlice = createSlice({
       state.isLoading = false;
       state.error = action.error.message;
     });
-    builder.addCase(removeFromFavorites.pending, state => {
+    builder.addCase(removeFromFavorites.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(removeFromFavorites.fulfilled, (state, action) => {

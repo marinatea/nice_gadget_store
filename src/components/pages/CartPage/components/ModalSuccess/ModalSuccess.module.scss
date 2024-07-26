@@ -1,6 +1,6 @@
-@use "/src/utils/mobileHeaderFonts" as mhF;
-@use "/src/utils/mediaQueries.module" as mQ;
-@use "/src/constants/colors.module" as color;
+@use '/src/utils/mobileHeaderFonts' as mhF;
+@use '/src/utils/mediaQueries.module' as mQ;
+@use '/src/constants/colors.module' as color;
 
 .modal {
   display: flex;

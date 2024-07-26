@@ -1,6 +1,6 @@
-@use "/src/utils/desktopHeaderFonts" as dF;
-@use "/src/utils/mediaQueries.module" as mQ;
-@use "/src/constants/colors.module" as c;
+@use '/src/utils/desktopHeaderFonts' as dF;
+@use '/src/utils/mediaQueries.module' as mQ;
+@use '/src/constants/colors.module' as c;
 
 .header {
   display: flex;
@@ -87,7 +87,7 @@
               left: 0;
               background-color: c.$primary;
               height: 1px;
-              content: "";
+              content: '';
             }
           }
 
@@ -101,7 +101,7 @@
               left: 0;
               background-color: c.$primary;
               height: 1px;
-              content: "";
+              content: '';
             }
           }
         }
@@ -141,7 +141,7 @@
         &::after {
           position: absolute;
           background-color: c.$primary;
-          content: "";
+          content: '';
         }
       }
 
@@ -172,7 +172,7 @@
       &::after {
         position: absolute;
         background-color: c.$primary;
-        content: "";
+        content: '';
       }
     }
 

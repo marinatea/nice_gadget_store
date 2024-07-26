@@ -34,7 +34,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        {['phones', 'tablets', 'accessories'].map(productType => (
+        {['phones', 'tablets', 'accessories'].map((productType) => (
           <Route key={productType} path={productType}>
             <Route
               index

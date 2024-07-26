@@ -33,7 +33,7 @@ const ImagesSelector: React.FC<Props> = ({ images }) => {
             key={image}
             className={classNames(
               styles['secondary-img-container'],
-              selectedImageIndex === i ? styles.selected : ''
+              selectedImageIndex === i ? styles.selected : '',
             )}
             onClick={() => setSelectedImageIndex(i)}
           >

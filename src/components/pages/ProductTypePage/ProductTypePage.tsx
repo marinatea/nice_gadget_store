@@ -34,7 +34,7 @@ const itemsPerPageOptions = [
 const ProductTypePage: React.FC<Props> = ({ productsType }) => {
   const dispatch = useAppDispatch();
   const { phones, tablets, accessories, sortedProducts, isLoading } =
-    useProductsSelector(state => state);
+    useProductsSelector((state) => state);
   const params = useMemo(() => new URLSearchParams(window.location.search), []);
   const [currentPage, setCurrentPage] = useState(
     () => Number(params.get('page')) || 1,
@@ -129,8 +129,8 @@ const ProductTypePage: React.FC<Props> = ({ productsType }) => {
               ? `${styles.active} ${styles['page-number']}`
               : styles['page-number']
           }
-          onMouseEnter={e => e.currentTarget.classList.add(styles.hover)}
-          onMouseLeave={e => e.currentTarget.classList.remove(styles.hover)}
+          onMouseEnter={(e) => e.currentTarget.classList.add(styles.hover)}
+          onMouseLeave={(e) => e.currentTarget.classList.remove(styles.hover)}
         >
           {i}
         </span>,
@@ -174,7 +174,7 @@ const ProductTypePage: React.FC<Props> = ({ productsType }) => {
         </div>
       </div>
       <div className={styles['cards-container']}>
-        {sortedProducts.map(product => (
+        {sortedProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

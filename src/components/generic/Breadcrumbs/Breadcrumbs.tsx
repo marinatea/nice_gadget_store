@@ -7,7 +7,7 @@ import styles from './Breadcrumbs.module.scss';
 const Breadcrumbs: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const pathnames = location.pathname.split('/').filter(pathname => pathname);
+  const pathnames = location.pathname.split('/').filter((pathname) => pathname);
 
   const formatBreadcrumb = (breadcrumb: string) => {
     return breadcrumb.charAt(0).toUpperCase() + breadcrumb.slice(1);

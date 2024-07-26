@@ -1,5 +1,5 @@
-@use "/src/utils/miscFonts.scss" as fonts;
-@use "/src/constants/colors.module.scss" as color;
+@use '/src/utils/miscFonts.scss' as fonts;
+@use '/src/constants/colors.module.scss' as color;
 
 .container {
   @include fonts.button-font;

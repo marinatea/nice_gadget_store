@@ -8,10 +8,10 @@ import Loader from '../../generic/Loader/Loader';
 
 const HomePage: React.FC = () => {
   const { phones, tablets, accessories, newModels, hotPrices } =
-    useProductsSelector(state => state);
+    useProductsSelector((state) => state);
   const { user } = useUser();
 
-  const isLoading = useProductsSelector(state => state.isLoading);
+  const isLoading = useProductsSelector((state) => state.isLoading);
 
   if (isLoading) {
     return <Loader />;

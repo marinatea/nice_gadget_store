@@ -1,7 +1,7 @@
-@use "/src/utils/mediaQueries.module.scss" as mQ;
-@use "/src/utils/mobileHeaderFonts.scss" as mHF;
-@use "/src/utils/desktopHeaderFonts.scss" as dHF;
-@use "/src/constants/colors.module.scss" as color;
+@use '/src/utils/mediaQueries.module.scss' as mQ;
+@use '/src/utils/mobileHeaderFonts.scss' as mHF;
+@use '/src/utils/desktopHeaderFonts.scss' as dHF;
+@use '/src/constants/colors.module.scss' as color;
 
 .products-slider {
   width: 100%;

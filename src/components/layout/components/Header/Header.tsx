@@ -137,14 +137,20 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
                   className={styles['header-burger-icon']}
                   onClick={() => setIsNavbarOpen(false)}
                 >
-                  <Icon iconId={Icons.HEART} className={styles['header-icon-heart']} />
+                  <Icon
+                    iconId={Icons.HEART}
+                    className={styles['header-icon-heart']}
+                  />
                 </NavLink>
                 <NavLink
                   to="/cart"
                   className={styles['header-burger-icon']}
                   onClick={() => setIsNavbarOpen(!isNavbarOpen)}
                 >
-                  <Icon iconId={Icons.CART} className={styles['header-icon-cart']} />
+                  <Icon
+                    iconId={Icons.CART}
+                    className={styles['header-icon-cart']}
+                  />
                 </NavLink>
               </div>
             </>

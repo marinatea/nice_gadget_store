@@ -10,7 +10,7 @@ const FavoritesPage: React.FC = () => {
   const favorites = useFavoritesSelector(
     (state: FavoritesState) => state.favorites,
   );
-  const isLoading = useFavoritesSelector(state => state.isLoading);
+  const isLoading = useFavoritesSelector((state) => state.isLoading);
 
   if (isLoading) {
     return <Loader />;

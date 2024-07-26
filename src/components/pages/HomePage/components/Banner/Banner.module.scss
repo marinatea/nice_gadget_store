@@ -1,8 +1,8 @@
-@use "/src/utils/miscFonts.scss" as fonts;
-@use "/src/utils/mobileHeaderFonts.scss" as mHF;
-@use "/src/constants/colors.module.scss" as color;
-@use "/src/utils/desktopHeaderFonts.scss" as dHF;
-@use "/src/utils/mediaQueries.module.scss" as mQ;
+@use '/src/utils/miscFonts.scss' as fonts;
+@use '/src/utils/mobileHeaderFonts.scss' as mHF;
+@use '/src/constants/colors.module.scss' as color;
+@use '/src/utils/desktopHeaderFonts.scss' as dHF;
+@use '/src/utils/mediaQueries.module.scss' as mQ;
 
 .banner {
   width: 100%;
@@ -109,7 +109,7 @@
   }
 
   &__image1 {
-    background-image: url("https://storage.googleapis.com/group_project_images/img/banner-small.png");
+    background-image: url('https://storage.googleapis.com/group_project_images/img/banner-small.png');
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -121,15 +121,15 @@
   }
 
   &__image-container2 {
-    background-image: url("https://storage.googleapis.com/group_project_images/img/banner-accessories.png");
+    background-image: url('https://storage.googleapis.com/group_project_images/img/banner-accessories.png');
   }
 
   &__image-container3 {
-    background-image: url("https://storage.googleapis.com/group_project_images/img/banner-phones.png");
+    background-image: url('https://storage.googleapis.com/group_project_images/img/banner-phones.png');
   }
 
   &__image-container4 {
-    background-image: url("https://storage.googleapis.com/group_project_images/img/banner-tablets.png");
+    background-image: url('https://storage.googleapis.com/group_project_images/img/banner-tablets.png');
   }
 
   &__overlay-container {
