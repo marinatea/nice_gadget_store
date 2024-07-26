@@ -21,7 +21,7 @@ const Icon: React.FC<Props> = ({
       })}
       onClick={!disabled ? onClick : undefined}
     >
-      <use href={`/img/sprite.svg#${iconId}`} />
+      <use href={`${process.env.PUBLIC_URL}/img/sprite.svg#${iconId}`} />
     </svg>
   );
 };
