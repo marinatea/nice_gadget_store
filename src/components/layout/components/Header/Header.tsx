@@ -14,11 +14,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import Loader from '../../../generic/Loader/Loader';
 
-interface HeaderProps {
-  children?: React.ReactNode;
-}
-
-const Header: React.FC<HeaderProps> = ({ children }) => {
+const Header: React.FC = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [icon, setIcon] = useState(isNavbarOpen ? Icons.CLOSE : Icons.BURGER);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -53,24 +49,25 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
   }
 
   return (
-    <header className={styles['header']}>
-      {children}
+    <header className={styles.header}>
       <NavLink to="/">
         <img
-          className={styles['header-logo']}
-          src="https://storage.googleapis.com/group_project_images/img/Logo.png"
+          className={styles.divLogo}
+          src={
+            'https://storage.googleapis.com/group_project_images/img/Logo.png'
+          }
           alt="logo"
         />
       </NavLink>
       <nav
-        className={`${styles['header-navbar']} ${isNavbarOpen ? styles['header-navbar--active'] : ''}`}
+        className={`${styles.navbar} ${isNavbarOpen ? styles.navbar_active : ''}`}
       >
-        <ul className={styles['header-navlinks']}>
+        <ul className={styles.navlinks}>
           <li>
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/"
-              className={({ isActive }) => (isActive ? styles['active'] : '')}
+              className={({ isActive }) => (isActive ? styles.active : '')}
             >
               Home
             </NavLink>
@@ -79,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/phones"
-              className={({ isActive }) => (isActive ? styles['active'] : '')}
+              className={({ isActive }) => (isActive ? styles.active : '')}
             >
               Phones
             </NavLink>
@@ -88,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/tablets"
-              className={({ isActive }) => (isActive ? styles['active'] : '')}
+              className={({ isActive }) => (isActive ? styles.active : '')}
             >
               Tablets
             </NavLink>
@@ -97,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
             <NavLink
               onClick={() => setIsNavbarOpen(false)}
               to="/accessories"
-              className={({ isActive }) => (isActive ? styles['active'] : '')}
+              className={({ isActive }) => (isActive ? styles.active : '')}
             >
               Accessories
             </NavLink>
@@ -106,17 +103,17 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
             <li>
               <NavLink
                 to="/signin"
-                className={({ isActive }) => (isActive ? styles['active'] : '')}
+                className={({ isActive }) => (isActive ? styles.active : '')}
               >
-                Sign In
+                SignIn
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/signup"
-                className={({ isActive }) => (isActive ? styles['active'] : '')}
+                className={({ isActive }) => (isActive ? styles.active : '')}
               >
-                Sign Up
+                SigneUp
               </NavLink>
             </li>
           </SignedOut>
@@ -130,40 +127,40 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
 
           {isNavbarOpen && (
             <>
-              <div className={styles['header-burger-icons']}>
+              <div className={styles.burgerIcons}>
                 <NavLink
                   to="/favorites"
-                  className={styles['header-burger-icon']}
+                  className={styles.burgerIcon}
                   onClick={() => setIsNavbarOpen(false)}
                 >
-                  <Icon iconId={Icons.HEART} className={styles['header-icon-heart']} />
+                  <Icon iconId={Icons.HEART} className={styles.heart} />
                 </NavLink>
                 <NavLink
                   to="/cart"
-                  className={styles['header-burger-icon']}
+                  className={styles.burgerIcon}
                   onClick={() => setIsNavbarOpen(!isNavbarOpen)}
                 >
-                  <Icon iconId={Icons.CART} className={styles['header-icon-cart']} />
+                  <Icon iconId={Icons.CART} className={styles.cart} />
                 </NavLink>
               </div>
             </>
           )}
         </ul>
       </nav>
-      <div className={styles['header-icons']}>
+      <div className={styles.icons}>
         <NavLink to="/favorites">
-          <Icon iconId={Icons.HEART} className={styles['header-icon-heart']} />
+          <Icon iconId={Icons.HEART} className={styles.heart} />
           <FavoriteBadge />
         </NavLink>
         <NavLink to="/cart">
-          <Icon iconId={Icons.CART} className={styles['header-icon-cart']} />
+          <Icon iconId={Icons.CART} className={styles.cart} />
           <CartBadge />
         </NavLink>
         <div
-          className={styles['header-burger']}
+          className={styles.union}
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
         >
-          <Icon iconId={icon} className={styles['header-burger']} />
+          <Icon iconId={icon} className={styles.burger} />
         </div>
       </div>
     </header>

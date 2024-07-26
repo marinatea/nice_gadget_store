@@ -1,6 +1,7 @@
-@use "/src/utils/desktopHeaderFonts" as dF;
-@use "/src/utils/mediaQueries.module" as mQ;
-@use "/src/constants/colors.module" as c;
+@use '/src/utils/desktopHeaderFonts' as dF;
+@use '/src/utils/mobileHeaderFonts' as mHF;
+@use '/src/utils/mediaQueries.module' as mQ;
+@use '/src/constants/colors.module' as c;
 
 .header {
   display: flex;
@@ -14,13 +15,13 @@
   color: c.$primary;
   margin-bottom: 56px;
 
-  .header-logo {
+  .div-logo {
     padding: 18px 48px 18px 24px;
     width: 80px;
     height: 28px;
   }
 
-  .header-navbar {
+  .navbar {
     display: flex;
     position: absolute;
     justify-content: space-between;
@@ -30,20 +31,20 @@
     width: 100%;
     text-align: center;
 
-    &.header-navbar-active {
+    &.navbar-active {
       transform: translateX(0);
       top: 66px;
       height: calc(100vh - 65px);
     }
 
-    .header-burger-icons {
+    .burger-icons {
       display: flex;
       flex-direction: row;
       width: 100%;
       height: 64px;
     }
 
-    .header-burger-icon {
+    .burger-icon {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -51,7 +52,7 @@
       width: 50%;
     }
 
-    .header-navlinks {
+    .navlinks {
       gap: 10px;
       display: flex;
       flex-grow: 1;
@@ -87,7 +88,7 @@
               left: 0;
               background-color: c.$primary;
               height: 1px;
-              content: "";
+              content: '';
             }
           }
 
@@ -101,7 +102,7 @@
               left: 0;
               background-color: c.$primary;
               height: 1px;
-              content: "";
+              content: '';
             }
           }
         }
@@ -115,7 +116,7 @@
       width: 100%;
       height: auto;
 
-      .header-navlinks {
+      .navlinks {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
@@ -123,12 +124,12 @@
     }
   }
 
-  .header-icons {
+  .icons {
     display: flex;
     padding-left: 48px;
 
-    .header-icon-heart,
-    .header-icon-cart {
+    .heart,
+    .cart {
       position: relative;
       border: 1px solid c.$elements;
       padding: 24px;
@@ -141,7 +142,7 @@
         &::after {
           position: absolute;
           background-color: c.$primary;
-          content: "";
+          content: '';
         }
       }
 
@@ -159,7 +160,7 @@
     }
   }
 
-  .header-burger {
+  .burger {
     display: none;
     border: 1px solid c.$elements;
     padding: 24px;
@@ -172,7 +173,7 @@
       &::after {
         position: absolute;
         background-color: c.$primary;
-        content: "";
+        content: '';
       }
     }
 
