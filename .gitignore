@@ -14,3 +14,4 @@ reports
 cypress/screenshots
 cypress/videos
 .lh
+.env
