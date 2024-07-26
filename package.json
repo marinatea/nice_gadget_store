@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A description of your project",
   "main": "index.js",
+  "homepage": "http://twoj-login.github.io/nazwa-repozytorium",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -20,7 +21,6 @@
   },
   "author": "Mate Academy",
   "license": "GPL-3.0",
-  "homepage": "/",
   "dependencies": {
     "@clerk/clerk-react": "^5.2.8",
     "@cypress/react18": "^2.0.0",
