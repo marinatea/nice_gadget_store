@@ -13,6 +13,7 @@ import { Icons } from '../../../../types';
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import Loader from '../../../generic/Loader/Loader';
+import SearchBar from '../../../pages/HomePage/components/SearchBar/SearchBar';
 
 interface HeaderProps {
   children?: React.ReactNode;
@@ -150,6 +151,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
           )}
         </ul>
       </nav>
+      <SearchBar />
       <div className={styles['header-icons']}>
         <NavLink to="/favorites">
           <Icon iconId={Icons.HEART} className={styles['header-icon-heart']} />

@@ -1,7 +1,6 @@
 import Banner from './components/Banner/Banner';
 import { Link } from 'react-router-dom';
 import ProductsSlider from '../../generic/ProductsSlider/ProductsSlider';
-import SearchBar from './components/SearchBar/SearchBar';
 import styles from './HomePage.module.scss';
 import { useProductsSelector } from '../../../hooks/reduxHooks';
 import { useUser } from '@clerk/clerk-react';
@@ -26,7 +25,6 @@ const HomePage: React.FC = () => {
 
   return (
     <main className={styles['home-page']}>
-      <SearchBar />
       <h1 className={styles['title']}>
         Hey{user?.firstName && ' '}
         {user?.firstName}, welcome to Nice Gadgets store!
