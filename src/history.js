@@ -1,7 +1,7 @@
 import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory({
-  basename: '/nice_gadget_store'
+  basename: '/'
 });
 
 export default history;

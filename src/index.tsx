@@ -19,7 +19,7 @@ const Root = () => {
       <ClerkProvider
         publishableKey={PUBLISHABLE_KEY}
         navigate={(to: string) => navigate(to)}
-        path="/nice_gadget_store"
+        path="/"
       >
         <App />
       </ClerkProvider>
