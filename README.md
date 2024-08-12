@@ -45,7 +45,6 @@ Start
 ```bash
 npm start
 ```
-[back to top](#back-to-top)
 
 ## Contact
 - **Justin Nowoczek** - [LinkedIn](https://www.linkedin.com/in/justin-nowoczek-998749306/), [GitHub](https://github.com/JustinNowoczek)
